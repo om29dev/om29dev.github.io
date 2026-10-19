@@ -6,42 +6,76 @@ Hosted live on GitHub Pages: [https://om29dev.github.io](https://om29dev.github.
 
 ## Overview
 
-A clean, responsive, performance-focused portfolio site showcasing software engineering projects, hackathon victories, technical skills, certifications, and contact channels. Built with vanilla web standards for fast load times and zero build dependencies.
+A modern, fast, component-driven developer portfolio built with React 19, TypeScript, Vite, and Tailwind CSS. Showcases hackathon victories, technical research grants, filterable software projects, skills, education, and direct contact channels.
 
-## Structure
+## Tech Stack
+
+- **Framework**: React 19 + TypeScript
+- **Bundler & Tooling**: Vite 8 + @tailwindcss/vite
+- **Styling**: Tailwind CSS v4 + custom 3D perspective animations
+- **Icons**: Lucide React + custom inline vector assets
+- **Deployment**: GitHub Actions workflow to GitHub Pages
+
+## Architecture
 
 ```
 om29dev.github.io/
-|-- index.html          # Semantic HTML structure, hero, milestones, projects
-|-- css/
-|   `-- styles.css      # Core styles, light/dark themes, animations, responsive grid
-|-- js/
-|   `-- main.js         # Theme toggle, animated counters, category filters, copy feedback
-|-- assets/
-|   |-- om-portrait.webp # Optimized hero portrait image
-|   |-- om-portrait.png  # High-resolution hero portrait fallback
-|   |-- avatar.png      # Profile picture backup
-|   `-- favicon.svg     # Vector favicon
-`-- README.md           # Documentation
+|-- .github/workflows/
+|   `-- deploy.yml       # Automated GitHub Pages build & deployment
+|-- public/
+|   |-- assets/
+|   |   `-- om-portrait.webp # High-performance WebP photo cutout
+|   `-- favicon.svg      # Vector favicon
+|-- src/
+|   |-- components/
+|   |   |-- Navbar.tsx   # Glassmorphic header with theme switcher
+|   |   |-- Hero.tsx     # 3D perspective photo cutout & live badges
+|   |   |-- Milestones.tsx # Hackathon victories with expansion toggle
+|   |   |-- Projects.tsx # Filterable projects with expansion toggle
+|   |   |-- Skills.tsx   # Categorized technical capabilities
+|   |   |-- Education.tsx # PCCOE B.Tech IT background
+|   |   |-- Certifications.tsx # Credentials with expansion toggle
+|   |   |-- Contact.tsx  # Direct channels with one-click copy & mailer
+|   |   |-- Footer.tsx   # Clean footer & back-to-top
+|   |   `-- Icons.tsx    # Pixel-perfect GitHub & LinkedIn vector components
+|   |-- data/
+|   |   `-- portfolioData.ts # Centralized portfolio content
+|   |-- App.tsx          # Root application container
+|   |-- main.tsx         # React root mounting
+|   |-- index.css        # Tailwind imports & 3D card transforms
+|   `-- types.ts         # TypeScript data interfaces
+|-- index.html           # Vite root HTML template
+|-- vite.config.ts       # Vite bundler configuration
+|-- tsconfig.json        # TypeScript configuration
+`-- package.json         # Dependencies & scripts
 ```
 
-## Key Highlights
+## Features
 
-- **Light Theme by Default**: Clean, modern aesthetics with subtle mesh glow effects, crisp typography, and an optional dark mode toggle.
-- **Hackathon Victories & Grants**:
-  - 1st Place Winner: Alphabyte 3.0 National Level Hackathon (GDG On Campus, PCCOE)
-  - 1st Place Round 1 & 3rd Prize Finals: IEEE R10 ACEI INV.ENT Pitch Competition 2026 (NIRIKSHA)
-  - Phase II Qualifier & AUD 750 Innovation Grant: Technology Infusion Grand Challenge (La Trobe University, Australia)
-  - Top Innovator Shortlist: AI for Bharat Hackathon (AWS & PCCOE)
-- **Featured Projects**: Civic Voice, NIRIKSHA, Civic Aegis, Nivora, WeedSight, AstroLog, Pandharpur 3D Digital Twin, Classroom Assessment Server, and Tessiq.
-- **Micro-Animations**: Floating achievement badges, ambient drifting glow blobs, animated metric counters, and smooth card reveals on scroll.
+- **3D Perspective Portrait**: Full-body transparent WebP cutout with mouse-tracking 3D tilt, realistic drop shadows, and floating achievement badges without rounded circular cropping.
+- **Progressive Disclosure**: Built-in "View More" and "Show Fewer" expansion buttons keep the site concise and scannable without overwhelming the visitor.
+- **Light Theme by Default**: Clean, high-contrast light theme with an optional dark mode toggle that respects user preference.
+- **Interactive Filtering**: Filter projects smoothly across Full-Stack, AI / Vision, and IoT / Edge categories.
+- **Direct Contact Integrations**: One-click copy for mobile (+91 8421936775) and email (ombharambe901@gmail.com) with toast confirmations.
+- **Strict Code Standards**: Zero emojis, zero en/em dashes, and standard ASCII typography.
 
 ## Local Development
 
-Open `index.html` directly in any modern browser, or run a local static server:
+Install dependencies and start the Vite development server:
 
 ```powershell
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8000`.
+Build for production:
+
+```powershell
+npm run build
+```
+
+Preview production build:
+
+```powershell
+npm run preview
+```

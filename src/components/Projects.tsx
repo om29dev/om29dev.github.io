@@ -1,0 +1,160 @@
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Layers, Cpu, Brain } from 'lucide-react';
+import { GithubIcon } from './Icons';
+import { projects } from '../data/portfolioData';
+import { ProjectCategory } from '../types';
+
+export const Projects: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('all');
+  const [showAll, setShowAll] = useState(false);
+
+  const categories: { label: string; value: ProjectCategory; count: number }[] = [
+    { label: 'All Projects', value: 'all', count: projects.length },
+    { label: 'Full-Stack', value: 'fullstack', count: projects.filter((p) => p.category === 'fullstack').length },
+    { label: 'AI & Vision', value: 'ai', count: projects.filter((p) => p.category === 'ai').length },
+    { label: 'IoT & Edge', value: 'iot', count: projects.filter((p) => p.category === 'iot').length },
+  ];
+
+  const filteredProjects = selectedCategory === 'all'
+    ? projects
+    : projects.filter((p) => p.category === selectedCategory);
+
+  const initialLimit = 4;
+  const isExpandable = filteredProjects.length > initialLimit;
+  const displayedProjects = showAll || !isExpandable
+    ? filteredProjects
+    : filteredProjects.slice(0, initialLimit);
+
+  const handleCategoryChange = (cat: ProjectCategory) => {
+    setSelectedCategory(cat);
+    setShowAll(false);
+  };
+
+  return (
+    <section id="projects" className="py-16 scroll-mt-20 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
+              Engineering Work
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">
+              Featured Projects
+            </h2>
+          </div>
+          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+            Production-oriented systems spanning responsive web applications, distributed backend services, and edge sensor telemetry.
+          </p>
+        </div>
+
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center gap-2 mb-8">
+          {categories.map((cat) => (
+            <button
+              key={cat.value}
+              onClick={() => handleCategoryChange(cat.value)}
+              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                selectedCategory === cat.value
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700'
+              }`}
+            >
+              {cat.label} ({cat.count})
+            </button>
+          ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {displayedProjects.map((project) => (
+            <div
+              key={project.id}
+              className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+            >
+              <div>
+                {/* Header with Category & Highlight Badge */}
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    {project.category === 'fullstack' && <Layers size={13} className="text-blue-500" />}
+                    {project.category === 'ai' && <Brain size={13} className="text-purple-500" />}
+                    {project.category === 'iot' && <Cpu size={13} className="text-emerald-500" />}
+                    <span className="capitalize">{project.category === 'ai' ? 'AI / ML' : project.category === 'iot' ? 'IoT & Edge' : 'Full-Stack'}</span>
+                  </span>
+
+                  {project.metrics && (
+                    <span className="text-[11px] font-mono font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/40 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-800">
+                      {project.metrics}
+                    </span>
+                  )}
+                </div>
+
+                {/* Title & Subtitle */}
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 mb-3">
+                  {project.subtitle}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                  {project.description}
+                </p>
+              </div>
+
+              <div>
+                {/* Tech Stack Badges */}
+                <div className="flex flex-wrap gap-1.5 mb-5 pt-3 border-t border-slate-100 dark:border-slate-800/80">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Card Footer Link */}
+                {project.githubUrl && (
+                  <div className="flex items-center justify-between">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      <GithubIcon size={14} />
+                      <span>View Source Code</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* View More / View Less Toggle Button */}
+        {isExpandable && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 shadow-sm transition-all"
+            >
+              <span>
+                {showAll
+                  ? 'Show Fewer Projects'
+                  : `View More Projects (${filteredProjects.length - initialLimit} more)`
+                }
+              </span>
+              {showAll ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </button>
+          </div>
+        )}
+
+      </div>
+    </section>
+  );
+};

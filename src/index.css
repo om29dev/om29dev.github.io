@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --border-color: rgba(226, 232, 240, 0.9);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --brand-accent: #2563eb;
+  }
+
+  .dark {
+    --bg-main: #090d16;
+    --card-bg: rgba(15, 23, 42, 0.75);
+    --border-color: rgba(51, 65, 85, 0.6);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --brand-accent: #3b82f6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Blueprint subtle grid pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(99, 102, 241, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+}
+
+/* 3D cutout photo styling */
+.photo-3d-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.photo-3d-card {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.photo-cutout-img {
+  filter: drop-shadow(0 20px 25px rgba(15, 23, 42, 0.18)) 
+          drop-shadow(0 8px 10px rgba(37, 99, 235, 0.14));
+  transform: translateZ(40px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.dark .photo-cutout-img {
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.6)) 
+          drop-shadow(0 0 35px rgba(59, 130, 246, 0.25));
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) translateZ(30px);
+  }
+  50% {
+    transform: translateY(-8px) translateZ(30px);
+  }
+}
+
+@keyframes floatGentleReverse {
+  0%, 100% {
+    transform: translateY(0px) translateZ(30px);
+  }
+  50% {
+    transform: translateY(8px) translateZ(30px);
+  }
+}
+
+.animate-float-1 {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatGentleReverse 6s ease-in-out infinite;
+}
+
+/* Ambient glow orb behind cutout */
+@keyframes pulseAura {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+.animate-aura {
+  animation: pulseAura 8s ease-in-out infinite;
+}
