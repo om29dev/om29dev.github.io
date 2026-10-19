@@ -1,30 +1,35 @@
 /*
  * Portfolio Client Scripts
  * Om Rajendra Bharambe (om29dev)
+ * Light Theme Default, Micro-Interactions, Animated Counters & Copy Feedback
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initMobileMenu();
   initProjectFilters();
-  initCopyEmail();
+  initCopyActions();
   initContactForm();
   initScrollSpy();
+  initScrollAnimations();
+  initCounterAnimation();
 });
 
-/* Theme Handling */
+/* =========================================
+   Theme Handling (Light Default)
+   ========================================= */
 function initTheme() {
   const themeToggleBtn = document.getElementById('theme-toggle-btn');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Default strictly to light theme unless explicitly chosen otherwise
   const storedTheme = localStorage.getItem('om29dev-theme');
-  const currentTheme = storedTheme || (prefersDark ? 'dark' : 'dark'); // Dark default
+  const currentTheme = storedTheme || 'light';
 
   applyTheme(currentTheme);
 
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
-      const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-      const targetTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      const activeTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const targetTheme = activeTheme === 'light' ? 'dark' : 'light';
       applyTheme(targetTheme);
       localStorage.setItem('om29dev-theme', targetTheme);
     });
@@ -68,7 +73,9 @@ function applyTheme(theme) {
   }
 }
 
-/* Mobile Menu */
+/* =========================================
+   Mobile Navigation Menu
+   ========================================= */
 function initMobileMenu() {
   const menuBtn = document.getElementById('mobile-menu-btn');
   const navMenu = document.getElementById('nav-menu');
@@ -87,7 +94,9 @@ function initMobileMenu() {
   });
 }
 
-/* Project Category Filtering */
+/* =========================================
+   Project Category Filtering
+   ========================================= */
 function initProjectFilters() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -103,101 +112,147 @@ function initProjectFilters() {
 
       projectCards.forEach((card) => {
         const categories = card.getAttribute('data-category') || '';
-        if (filterValue === 'all' || categories.split(' ').includes(filterValue)) {
-          card.style.display = 'flex';
+        const isFeatured = card.hasAttribute('data-featured');
+
+        let isMatch = false;
+        if (filterValue === 'all') {
+          isMatch = true;
+        } else if (filterValue === 'featured') {
+          isMatch = isFeatured;
         } else {
-          card.style.display = 'none';
+          isMatch = categories.toLowerCase().includes(filterValue.toLowerCase());
+        }
+
+        if (isMatch) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 200);
         }
       });
     });
   });
 }
 
-/* Email Copy Handler */
-function initCopyEmail() {
-  const copyButtons = document.querySelectorAll('.js-copy-email');
-
+/* =========================================
+   Copy to Clipboard & Toast
+   ========================================= */
+function initCopyActions() {
+  const copyButtons = document.querySelectorAll('.js-copy-btn');
+  
   copyButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      const email = btn.getAttribute('data-email') || 'ombharambe29@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        showToast('Email copied to clipboard: ' + email);
-      }).catch(() => {
-        showToast('Unable to copy. Email: ' + email);
-      });
+      const textToCopy = btn.getAttribute('data-copy-text');
+      const label = btn.getAttribute('data-copy-label') || 'Copied';
+      
+      if (!textToCopy) return;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast(label);
+        }).catch(() => {
+          fallbackCopyText(textToCopy, label);
+        });
+      } else {
+        fallbackCopyText(textToCopy, label);
+      }
     });
   });
 }
 
-/* Toast Message */
+function fallbackCopyText(text, label) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-999999px';
+  textArea.style.top = '-999999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  try {
+    document.execCommand('copy');
+    showToast(label);
+  } catch (err) {
+    showToast('Failed to copy');
+  }
+
+  document.body.removeChild(textArea);
+}
+
 function showToast(message) {
-  let toast = document.getElementById('toast');
+  let toast = document.getElementById('toast-notice');
   if (!toast) {
     toast = document.createElement('div');
-    toast.id = 'toast';
-    toast.className = 'toast';
+    toast.id = 'toast-notice';
+    toast.className = 'toast-notice';
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<span class="toast-dot"></span><span>${escapeHtml(message)}</span>`;
+  toast.textContent = message;
   toast.classList.add('show');
 
   setTimeout(() => {
     toast.classList.remove('show');
-  }, 3200);
+  }, 2600);
 }
 
-function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
-}
-
-/* Contact Form */
+/* =========================================
+   Contact Form mailto Generator
+   ========================================= */
 function initContactForm() {
   const contactForm = document.getElementById('contact-form');
   if (!contactForm) return;
 
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const nameInput = document.getElementById('form-name');
-    const emailInput = document.getElementById('form-email');
-    const messageInput = document.getElementById('form-message');
 
-    const name = nameInput ? nameInput.value.trim() : '';
-    const email = emailInput ? emailInput.value.trim() : '';
-    const message = messageInput ? messageInput.value.trim() : '';
+    const name = document.getElementById('form-name')?.value.trim() || '';
+    const email = document.getElementById('form-email')?.value.trim() || '';
+    const message = document.getElementById('form-message')?.value.trim() || '';
 
-    if (!message) {
-      showToast('Please enter a message before sending.');
+    if (!name || !email || !message) {
+      showToast('Please fill out all fields');
       return;
     }
 
-    const subject = encodeURIComponent(`Portfolio Message from ${name || 'Visitor'}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    const mailtoUrl = `mailto:ombharambe29@gmail.com?subject=${subject}&body=${body}`;
+    const recipient = 'ombharambe901@gmail.com';
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent via portfolio contact form`
+    );
 
-    window.location.href = mailtoUrl;
-    showToast('Opening your default email client...');
+    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    showToast('Opening your email client...');
+    contactForm.reset();
   });
 }
 
-/* Scrollspy Navigation Active Highlight */
+/* =========================================
+   ScrollSpy for Active Nav Link
+   ========================================= */
 function initScrollSpy() {
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
   if (!sections.length || !navLinks.length) return;
 
   window.addEventListener('scroll', () => {
-    const scrollPosition = window.scrollY + 100;
+    const scrollPos = window.scrollY + 120;
 
     sections.forEach((section) => {
       const top = section.offsetTop;
       const height = section.offsetHeight;
       const id = section.getAttribute('id');
 
-      if (scrollPosition >= top && scrollPosition < top + height) {
+      if (scrollPos >= top && scrollPos < top + height) {
         navLinks.forEach((link) => {
           link.classList.remove('active');
           if (link.getAttribute('href') === `#${id}`) {
@@ -209,3 +264,82 @@ function initScrollSpy() {
   }, { passive: true });
 }
 
+/* =========================================
+   Scroll Reveal Animations
+   ========================================= */
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  if (!animatedElements.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    animatedElements.forEach((el) => observer.observe(el));
+  } else {
+    // Fallback if IntersectionObserver not supported
+    animatedElements.forEach((el) => el.classList.add('is-visible'));
+  }
+}
+
+/* =========================================
+   Animated Metric Counters
+   ========================================= */
+function initCounterAnimation() {
+  const statCards = document.querySelectorAll('.stat-card');
+  if (!statCards.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const valueEl = entry.target.querySelector('.stat-value');
+          if (valueEl && !valueEl.classList.contains('counted')) {
+            valueEl.classList.add('counted');
+            animateValue(valueEl);
+          }
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    statCards.forEach((card) => observer.observe(card));
+  }
+}
+
+function animateValue(element) {
+  const rawText = element.textContent.trim();
+  const match = rawText.match(/^([^\d]*)(\d+)([^\d]*)$/);
+
+  if (!match) return; // Non-numeric values (e.g. "B.Tech" or "100%")
+
+  const prefix = match[1] || '';
+  const targetNum = parseInt(match[2], 10);
+  const suffix = match[3] || '';
+
+  let current = 0;
+  const duration = 1200;
+  const steps = 30;
+  const stepTime = Math.floor(duration / steps);
+  const increment = targetNum / steps;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= targetNum) {
+      clearInterval(timer);
+      element.textContent = `${prefix}${targetNum}${suffix}`;
+    } else {
+      element.textContent = `${prefix}${Math.floor(current)}${suffix}`;
+    }
+  }, stepTime);
+}

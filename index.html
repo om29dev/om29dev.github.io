@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Om Rajendra Bharambe (om29dev) - Software Engineer, Backend & Cloud Systems, Mobile Developer, and Applied AI Enthusiast.">
+  <meta name="description" content="Portfolio of Om Rajendra Bharambe (om29dev) - BTech IT @ PCCOE, Full-Stack & Mobile Developer, AI, Cloud, and IoT Engineer.">
   <meta name="author" content="Om Rajendra Bharambe">
-  <meta name="keywords" content="Om Bharambe, om29dev, Software Engineer, Flutter Developer, Backend Developer, AI Engineer, Pune, PCCOE">
-  <meta property="og:title" content="Om Rajendra Bharambe | Software Engineer & Developer">
-  <meta property="og:description" content="Personal portfolio and project showcase for Om Rajendra Bharambe (om29dev).">
+  <meta name="keywords" content="Om Bharambe, om29dev, PCCOE, Software Engineer, Full-Stack Developer, Flutter, Python, FastAPI, AI, IoT, Cloud, Pune">
+  <meta property="og:title" content="Om Rajendra Bharambe | Portfolio & Projects">
+  <meta property="og:description" content="Explore projects, hackathon victories, and engineering work of Om Rajendra Bharambe (om29dev).">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://om29dev.github.io/">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Om Rajendra Bharambe | Software Engineer</title>
+  <title>Om Rajendra Bharambe | Software Engineer &amp; Developer</title>
   
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +20,12 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- Ambient Animated Background Glows -->
+  <div class="ambient-glow-wrap" aria-hidden="true">
+    <div class="ambient-blob-1"></div>
+    <div class="ambient-blob-2"></div>
+  </div>
 
   <!-- Navigation -->
   <header class="site-header">
@@ -31,17 +37,18 @@
 
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#achievements" class="nav-link">Milestones</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
-        <li><a href="#activity" class="nav-link">Activity</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
         <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
         <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open navigation menu">
@@ -60,18 +67,26 @@
         <div class="hero-content">
           <div class="status-badge">
             <span class="status-dot"></span>
-            <span>Open to Engineering Opportunities</span>
+            <span>Open to Engineering Internships &amp; Collaborations</span>
           </div>
-          <h1>Om Rajendra Bharambe</h1>
-          <div class="hero-role">&lt;Software Development &amp; Cloud Systems /&gt;</div>
+          <h1>
+            Hi, I'm <span class="hero-title-highlight">Om Bharambe</span>
+          </h1>
+          <div class="hero-role">&lt;BTech IT @ PCCOE | Full-Stack &amp; Mobile Developer | AI | Cloud | IoT /&gt;</div>
           <p class="hero-desc">
-            B.Tech in Information Technology at PCCOE Pune. Building practical software ranging from voice-first civic platforms and developer workstations to IoT telemetry and edge computer vision.
+            Curious about what can be built, improved, or done differently. Turning concepts into working prototypes across high-performance backends, Flutter mobile apps, IoT telemetry systems, and edge computer vision.
           </p>
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">
               <span>View Projects</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a href="#achievements" class="btn btn-secondary">
+              <span>Milestones &amp; Awards</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
             </a>
             <a href="https://github.com/om29dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
@@ -93,32 +108,65 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span>Pune, Maharashtra, India</span>
+              <span>Pune / Pimpri-Chinchwad, India</span>
             </div>
             <div class="meta-item">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
               </svg>
-              <span>PCCOE Pune (Information Technology)</span>
+              <span>PCCOE Pune (B.Tech IT, 2024 - 2028)</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="profile-card">
-            <div class="profile-img-wrap">
-              <img src="assets/avatar.png" alt="Om Rajendra Bharambe" class="profile-img" onerror="this.src='https://avatars.githubusercontent.com/u/237210981?v=4'">
+          <div class="hero-portrait-stage">
+            <div class="portrait-glow-ring" aria-hidden="true"></div>
+
+            <!-- Floating Badge Top: Hackathon Victory -->
+            <div class="floating-badge floating-badge-top">
+              <div class="badge-icon-box badge-icon-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <span class="badge-text-primary">1st Place Winner</span>
+                <span class="badge-text-sub">Alphabyte 3.0 National Hackathon</span>
+              </div>
             </div>
-            <h3 class="profile-name">Om Bharambe</h3>
-            <div class="profile-handle">@om29dev</div>
-            <div class="profile-tags">
-              <span class="profile-tag">Flutter</span>
-              <span class="profile-tag">Python</span>
-              <span class="profile-tag">FastAPI</span>
-              <span class="profile-tag">Java</span>
-              <span class="profile-tag">IoT / Edge</span>
-              <span class="profile-tag">AWS</span>
+
+            <div class="profile-card">
+              <div class="profile-img-wrap">
+                <picture>
+                  <source srcset="assets/om-portrait.webp" type="image/webp">
+                  <img src="assets/om-portrait.png" alt="Om Bharambe portrait" class="profile-img" onerror="this.src='assets/avatar.png'">
+                </picture>
+              </div>
+              <h3 class="profile-name">Om Bharambe</h3>
+              <div class="profile-handle">@om29dev</div>
+              <div class="profile-tags">
+                <span class="profile-tag">Full-Stack</span>
+                <span class="profile-tag">Flutter</span>
+                <span class="profile-tag">AI / YOLO</span>
+                <span class="profile-tag">Cloud</span>
+                <span class="profile-tag">IoT Mesh</span>
+                <span class="profile-tag">FastAPI</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom: International Grant -->
+            <div class="floating-badge floating-badge-bottom">
+              <div class="badge-icon-box badge-icon-green">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <span class="badge-text-primary">AUD 750 Grant</span>
+                <span class="badge-text-sub">La Trobe Univ. Australia (TIGC Phase II)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -129,21 +177,142 @@
     <section class="stats-section">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">15+</div>
-            <div class="stat-label">Public Repositories</div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-value">1st</div>
+            <div class="stat-label">National Winner (Alphabyte 3.0)</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-value">750</div>
+            <div class="stat-label">AUD Innovation Grant (La Trobe)</div>
+          </div>
+          <div class="stat-card animate-on-scroll">
             <div class="stat-value">4+</div>
-            <div class="stat-label">Core Domains (Mobile, Backend, AI, IoT)</div>
+            <div class="stat-label">National Hackathon Milestones</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">B.Tech</div>
-            <div class="stat-label">Information Technology (PCCOE)</div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Public GitHub Repositories</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">100%</div>
-            <div class="stat-label">Practical &amp; Impact-Oriented</div>
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-value">2028</div>
+            <div class="stat-label">B.Tech IT Graduation (PCCOE)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones & Recognition Section -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <span class="section-tag">Milestones &amp; Recognition</span>
+        <h2 class="section-title">Hackathon Victories &amp; Grants</h2>
+        <p class="section-subtitle">
+          Proven experience taking ideas from scratch to award-winning functional prototypes under competitive and international review.
+        </p>
+
+        <div class="milestones-grid">
+          <!-- Milestone 1: Alphabyte 3.0 Winner -->
+          <div class="achievement-card animate-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-pill pill-award">1st Place Winner</span>
+              <div class="achievement-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="achievement-title">Alphabyte 3.0 National Level Hackathon</h3>
+            <div class="achievement-org">GDG On Campus, PCCOE (24-Hour National Hackathon)</div>
+            <p class="achievement-desc">
+              Emerged as winners after 24 hours of continuous engineering, debugging, and iteration. Took ownership of the complete backend architecture, working on core business logic, database schema design, and microservice integrations under strict time constraints.
+            </p>
+            <div class="achievement-team">
+              <strong>Role &amp; Team:</strong> Backend Architecture Lead | Team Hustlers
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Backend Architecture</span>
+              <span class="achievement-tag">Database Design</span>
+              <span class="achievement-tag">System Design</span>
+              <span class="achievement-tag">24h Sprint</span>
+            </div>
+          </div>
+
+          <!-- Milestone 2: IEEE R10 ACEI INV.ENT Pitch 2026 -->
+          <div class="achievement-card animate-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-pill pill-award">1st Place R1 &amp; 3rd Prize Finals</span>
+              <div class="achievement-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="achievement-title">IEEE R10 ACEI INV.ENT Pitch Competition 2026</h3>
+            <div class="achievement-org">IEEE Pune Section &amp; PCCOE</div>
+            <p class="achievement-desc">
+              Secured 1st Place in Round 1 and 3rd Prize in the Final Round presenting NIRIKSHA, an intelligent environmental monitoring and hazard alert system. Delivered a functional working prototype with telemetry sensors, tested in real-world scenarios under academic mentorship.
+            </p>
+            <div class="achievement-team">
+              <strong>Team Hustlers:</strong> Om Bharambe, Madhav Khobare, Atharva Lokhande, Sidhant Mattoo, Ojas Barhate | <strong>Mentors:</strong> Dr. Jayashree Katti (HOD IT), Prof. Tanuja Patankar
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">NIRIKSHA</span>
+              <span class="achievement-tag">Working Prototype</span>
+              <span class="achievement-tag">IoT Mesh Telemetry</span>
+              <span class="achievement-tag">IEEE Pune Section</span>
+            </div>
+          </div>
+
+          <!-- Milestone 3: La Trobe Technology Infusion Grand Challenge -->
+          <div class="achievement-card animate-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-pill pill-grant">AUD 750 Grant &amp; Phase II</span>
+              <div class="achievement-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="achievement-title">Technology Infusion Grand Challenge</h3>
+            <div class="achievement-org">La Trobe University, Melbourne, Australia</div>
+            <p class="achievement-desc">
+              Qualified for Phase II and awarded an AUD 750 prototype innovation grant for Civic Aegis. Selected by international evaluators to turn civic reporting and urban infrastructure telemetry into an internationally backed, deployable solution.
+            </p>
+            <div class="achievement-team">
+              <strong>Team Hustlers:</strong> Om Bharambe, Madhav Khobare, Atharva Lokhande, Sidhant Mattoo | <strong>Guidance:</strong> Dr. Jayashree Katti (HOD IT, PCCOE)
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Civic Aegis</span>
+              <span class="achievement-tag">AUD 750 Grant</span>
+              <span class="achievement-tag">La Trobe University</span>
+              <span class="achievement-tag">Smart Cities</span>
+            </div>
+          </div>
+
+          <!-- Milestone 4: AI for Bharat -->
+          <div class="achievement-card animate-on-scroll">
+            <div class="achievement-header">
+              <span class="achievement-pill pill-innovator">Top Innovator Shortlist</span>
+              <div class="achievement-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <h3 class="achievement-title">AI for Bharat Hackathon</h3>
+            <div class="achievement-org">AWS &amp; PCCOE</div>
+            <p class="achievement-desc">
+              Shortlisted as a Top Innovator nationally and advanced into the Prototype Development Phase for Jago Bharat Jago. Designing and implementing cloud-connected AI workflows backed by AWS infrastructure for public community impact.
+            </p>
+            <div class="achievement-team">
+              <strong>Team Hustlers:</strong> Om Bharambe, Madhav Khobare, Atharva Lokhande, Sidhant Mattoo
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Jago Bharat Jago</span>
+              <span class="achievement-tag">AWS Cloud</span>
+              <span class="achievement-tag">Applied AI</span>
+              <span class="achievement-tag">Prototype Phase</span>
+            </div>
           </div>
         </div>
       </div>
@@ -152,26 +321,52 @@
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
-        <span class="section-tag">About</span>
-        <h2 class="section-title">Engineering with Purpose</h2>
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Hands-On Engineering &amp; Problem Solving</h2>
         <p class="section-subtitle">
-          Focused on architecting reliable systems, clean developer tooling, and applied machine learning solutions that solve concrete problems.
+          Driven by curiosity about how systems function, how ideas can be refined, and how practical code turns concepts into high-impact tools.
         </p>
 
         <div class="about-grid">
-          <div class="about-text">
+          <div class="about-text animate-on-scroll">
             <p>
-              I am an Information Technology undergraduate at <strong>Pimpri Chinchwad College of Engineering (PCCOE), Pune</strong>. My technical work spans full-stack backend development, cross-platform mobile engineering with Flutter, and edge-deployable AI models.
+              I am an Information Technology undergraduate at <strong>Pimpri Chinchwad College of Engineering (PCCOE), Pune</strong>. Curious about what can be built, improved, or done differently, I enjoy taking on unfamiliar challenges, understanding the underlying mechanisms of complex systems, and turning ideas into tangible software.
             </p>
             <p>
-              My philosophy centers on simplicity, system performance, and shipping functional software. Rather than building speculative demos, I develop solutions addressing specific use cases: accessibility in civic services through voice assistance (<strong>Civic Voice</strong>), mobile Android development environments (<strong>Nivora</strong>), precision agriculture weed detection (<strong>WeedSight</strong>), and industrial hazard telemetry (<strong>NIRIKSHA</strong>).
+              My approach to learning is strictly hands-on: going beyond theory, exploring ideas through active project work, and learning through the iterative process of creating something from the ground up. I focus on understanding the <em>why</em> behind every architectural decision, continuously refining how I approach system design, database schemas, and edge computing.
             </p>
             <p>
-              I actively explore distributed system principles, database optimization, and local-first AI pipelines capable of operating efficiently with minimal latency.
+              Currently, I am focused on growing as a full-stack engineer, strengthening core computer science problem-solving skills, and exploring cutting-edge areas across <strong>Full-Stack, Mobile Engineering, Applied AI, Cloud Systems, and IoT</strong>. I am open to internships, open-source collaborations, and challenging engineering initiatives.
             </p>
+
+            <div class="about-highlights">
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-text-title">Hands-On Mindset</div>
+                  <div class="highlight-text-sub">Theory validated through working code</div>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-text-title">Full Lifecycle</div>
+                  <div class="highlight-text-sub">From ideation to deployed prototype</div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="pillars-grid">
+          <div class="pillars-grid animate-on-scroll">
             <div class="pillar-card">
               <div class="pillar-header">
                 <div class="pillar-icon">
@@ -179,9 +374,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </div>
-                <h3 class="pillar-title">Backend &amp; Cloud Systems</h3>
+                <h3 class="pillar-title">Backend Architecture &amp; Cloud Systems</h3>
               </div>
-              <p class="pillar-desc">Designing RESTful APIs and microservices with FastAPI, Node.js, and Spring Boot, integrated with AWS infrastructure.</p>
+              <p class="pillar-desc">Designing RESTful APIs and microservices with FastAPI, Spring Boot, and Node.js, integrated with AWS infrastructure and scalable SQL schemas.</p>
             </div>
 
             <div class="pillar-card">
@@ -191,9 +386,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 class="pillar-title">Cross-Platform Mobile</h3>
+                <h3 class="pillar-title">Cross-Platform Mobile Engineering</h3>
               </div>
-              <p class="pillar-desc">Building intuitive, responsive Flutter applications with offline capabilities, background processing, and device integrations.</p>
+              <p class="pillar-desc">Building responsive Flutter applications with clean architecture, offline caching, native device integrations, and smooth 60fps animations.</p>
             </div>
 
             <div class="pillar-card">
@@ -205,7 +400,7 @@
                 </div>
                 <h3 class="pillar-title">Applied AI &amp; Edge Vision</h3>
               </div>
-              <p class="pillar-desc">Implementing object detection pipelines with YOLO, model quantization via ONNX, and LLM agent orchestration.</p>
+              <p class="pillar-desc">Implementing object detection pipelines with YOLO architectures, model quantization via ONNX for edge devices, and LLM agent orchestration.</p>
             </div>
 
             <div class="pillar-card">
@@ -215,27 +410,27 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 class="pillar-title">IoT Telemetry &amp; Mesh</h3>
+                <h3 class="pillar-title">IoT Telemetry &amp; Mesh Hardware</h3>
               </div>
-              <p class="pillar-desc">Connecting physical hardware (ESP32) over MQTT and mesh topologies with real-time time-series telemetry pipelines.</p>
+              <p class="pillar-desc">Interfacing physical sensors (ESP32) over MQTT and mesh topologies with real-time time-series telemetry pipelines feeding TimescaleDB.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Technical Skills Section -->
     <section id="skills" class="section">
       <div class="container">
-        <span class="section-tag">Technical Skills</span>
-        <h2 class="section-title">Core Competencies</h2>
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Core Skills &amp; Tech Stack</h2>
         <p class="section-subtitle">
-          Comprehensive toolkit across programming languages, backend frameworks, mobile toolchains, and distributed hardware systems.
+          Structured toolchain spanning programming languages, backend frameworks, mobile runtimes, AI pipelines, and hardware mesh protocols.
         </p>
 
         <div class="skills-domains">
-          <!-- Languages -->
-          <div class="domain-card">
+          <!-- Domain 1: Languages -->
+          <div class="domain-card animate-on-scroll">
             <div class="domain-header">
               <div class="domain-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -246,8 +441,8 @@
             </div>
             <div class="skill-list">
               <span class="skill-pill"><span class="skill-bullet"></span>Python</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>C++</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Java</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>C++</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Dart</span>
               <span class="skill-pill"><span class="skill-bullet"></span>TypeScript</span>
               <span class="skill-pill"><span class="skill-bullet"></span>JavaScript</span>
@@ -256,109 +451,111 @@
             </div>
           </div>
 
-          <!-- Backend & Cloud -->
-          <div class="domain-card">
+          <!-- Domain 2: Backend & Cloud -->
+          <div class="domain-card animate-on-scroll">
             <div class="domain-header">
               <div class="domain-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
               <h3 class="domain-title">Backend &amp; Cloud</h3>
             </div>
             <div class="skill-list">
               <span class="skill-pill"><span class="skill-bullet"></span>FastAPI</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Node.js</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Spring Boot</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Node.js</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Express</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>AWS (EC2, S3)</span>
               <span class="skill-pill"><span class="skill-bullet"></span>RESTful APIs</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>AWS Bedrock</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>AWS Amplify</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Docker</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>System Design</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Microservices</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>JWT Auth</span>
             </div>
           </div>
 
-          <!-- Mobile & Frontend -->
-          <div class="domain-card">
+          <!-- Domain 3: Mobile & Frontend -->
+          <div class="domain-card animate-on-scroll">
             <div class="domain-header">
               <div class="domain-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 class="domain-title">Mobile &amp; Frontend</h3>
             </div>
             <div class="skill-list">
               <span class="skill-pill"><span class="skill-bullet"></span>Flutter</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>React</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Three.js</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>HTML5 &amp; CSS3</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Tailwind CSS</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>React.js</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Next.js</span>
               <span class="skill-pill"><span class="skill-bullet"></span>State Management</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>HTML5 / CSS3</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Tailwind CSS</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Three.js / WebGL</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Responsive UI</span>
             </div>
           </div>
 
-          <!-- AI & Edge Computing -->
-          <div class="domain-card">
+          <!-- Domain 4: AI & Computer Vision -->
+          <div class="domain-card animate-on-scroll">
             <div class="domain-header">
               <div class="domain-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 class="domain-title">AI &amp; Edge Computing</h3>
+              <h3 class="domain-title">AI &amp; Data Science</h3>
             </div>
             <div class="skill-list">
               <span class="skill-pill"><span class="skill-bullet"></span>PyTorch</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>YOLO (Computer Vision)</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>YOLOv8 / YOLOv11</span>
               <span class="skill-pill"><span class="skill-bullet"></span>ONNX Runtime</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Edge AI Deployment</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Google Gemini API</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>LLM Agents</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Ollama</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Whisper ASR</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>NumPy &amp; Pandas</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>OpenCV</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Edge AI Optimization</span>
             </div>
           </div>
 
-          <!-- Databases & IoT -->
-          <div class="domain-card">
+          <!-- Domain 5: IoT & Hardware -->
+          <div class="domain-card animate-on-scroll">
+            <div class="domain-header">
+              <div class="domain-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 class="domain-title">IoT &amp; Embedded Systems</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-pill"><span class="skill-bullet"></span>ESP32</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Arduino</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>MQTT Protocol</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Mesh Topologies</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Sensor Interfacing</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Time-Series Telemetry</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Edge Alert Logic</span>
+            </div>
+          </div>
+
+          <!-- Domain 6: Databases & Tools -->
+          <div class="domain-card animate-on-scroll">
             <div class="domain-header">
               <div class="domain-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
                 </svg>
               </div>
-              <h3 class="domain-title">Databases &amp; IoT</h3>
+              <h3 class="domain-title">Databases &amp; Dev Tools</h3>
             </div>
             <div class="skill-list">
               <span class="skill-pill"><span class="skill-bullet"></span>PostgreSQL</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>MySQL</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>SQLite</span>
               <span class="skill-pill"><span class="skill-bullet"></span>TimescaleDB</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>MQTT Protocol</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>ESP32</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Mesh Telemetry</span>
-            </div>
-          </div>
-
-          <!-- Tooling & Workflow -->
-          <div class="domain-card">
-            <div class="domain-header">
-              <div class="domain-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h3 class="domain-title">Tooling &amp; Workflow</h3>
-            </div>
-            <div class="skill-list">
+              <span class="skill-pill"><span class="skill-bullet"></span>SQLite</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>MongoDB</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Docker</span>
               <span class="skill-pill"><span class="skill-bullet"></span>Git &amp; GitHub</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Linux Environments</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Termux Toolchains</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Postman</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>Vite</span>
-              <span class="skill-pill"><span class="skill-bullet"></span>CI / CD Basics</span>
+              <span class="skill-pill"><span class="skill-bullet"></span>Linux Runtimes</span>
             </div>
           </div>
         </div>
@@ -369,25 +566,26 @@
     <section id="projects" class="section">
       <div class="container">
         <span class="section-tag">Featured Work</span>
-        <h2 class="section-title">Projects &amp; Architectures</h2>
+        <h2 class="section-title">Projects &amp; Systems</h2>
         <p class="section-subtitle">
-          Real-world implementations across mobile ecosystems, cloud APIs, distributed telemetry, and edge computer vision.
+          Real-world applications addressing civic accessibility, developer workflows, precision agriculture, and IoT hardware telemetry.
         </p>
 
-        <!-- Project Filter Buttons -->
+        <!-- Project Filters -->
         <div class="project-filters">
           <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; ML</button>
-          <button class="filter-btn" data-filter="mobile">Mobile &amp; Cloud</button>
-          <button class="filter-btn" data-filter="iot">IoT &amp; Systems</button>
-          <button class="filter-btn" data-filter="web">Web &amp; 3D</button>
+          <button class="filter-btn" data-filter="featured">Featured</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; Cloud</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+          <button class="filter-btn" data-filter="iot">IoT &amp; Hardware</button>
         </div>
 
         <div class="projects-grid">
           <!-- 1. Civic Voice -->
-          <div class="project-card" data-category="mobile ai">
+          <div class="project-card animate-on-scroll" data-category="mobile ai backend" data-featured="true">
             <div class="project-top">
-              <span class="project-category">GovTech / AI Voice</span>
+              <span class="project-category">Mobile / AI / CivicTech</span>
               <div class="project-links">
                 <a href="https://github.com/om29dev/civic_voice" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Civic Voice GitHub repository">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -396,16 +594,16 @@
                 </a>
               </div>
             </div>
-            <h3 class="project-title">Civic Voice (CVI)</h3>
+            <h3 class="project-title">Civic Voice</h3>
             <p class="project-desc">
-              An AI-powered, voice-first civic services mobile platform built with Flutter and AWS. Assists Indian citizens in discovering welfare schemes, evaluating eligibility criteria, and navigating government portals through multilingual natural speech.
+              Voice-first multilingual civic issue reporting app with AI auto-categorization. Allows citizens to report local civic infrastructure defects by voice, automatically categorizing complaints, geocoding coordinates, and drafting structured municipal tickets.
             </p>
             <div class="project-tags">
               <span class="project-tag">Flutter</span>
-              <span class="project-tag">Dart</span>
-              <span class="project-tag">AWS Bedrock</span>
-              <span class="project-tag">AWS Amplify</span>
-              <span class="project-tag">Generative AI</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Whisper</span>
+              <span class="project-tag">Gemini API</span>
+              <span class="project-tag">PostgreSQL</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/om29dev/civic_voice" target="_blank" rel="noopener noreferrer" class="repo-link">
@@ -417,44 +615,12 @@
             </div>
           </div>
 
-          <!-- 2. Nivora -->
-          <div class="project-card" data-category="mobile ai">
-            <div class="project-top">
-              <span class="project-category">Developer Tools / Mobile</span>
-              <div class="project-links">
-                <a href="https://github.com/om29dev/Nivora" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Nivora GitHub repository">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <h3 class="project-title">Nivora</h3>
-            <p class="project-desc">
-              An AI-assisted Android development workstation and mobile IDE built with Flutter. Integrates on-device and cloud LLM coding assistants, embedded terminal access via Termux, Git synchronization, code editing, and live project preview.
-            </p>
-            <div class="project-tags">
-              <span class="project-tag">Flutter</span>
-              <span class="project-tag">Dart</span>
-              <span class="project-tag">AI Agents</span>
-              <span class="project-tag">Git Tooling</span>
-              <span class="project-tag">Offline-First</span>
-            </div>
-            <div class="project-footer">
-              <a href="https://github.com/om29dev/Nivora" target="_blank" rel="noopener noreferrer" class="repo-link">
-                <span>View on GitHub</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- 3. NIRIKSHA -->
-          <div class="project-card" data-category="iot">
+          <!-- 2. NIRIKSHA (IEEE Pitch Award Winner) -->
+          <div class="project-card animate-on-scroll" data-category="iot backend" data-featured="true">
             <div class="project-top">
               <span class="project-category">IoT &amp; Telemetry</span>
               <div class="project-links">
+                <span class="project-badge-award">IEEE 2026 Winner</span>
                 <a href="https://github.com/om29dev/niriksha" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="NIRIKSHA GitHub repository">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -464,15 +630,14 @@
             </div>
             <h3 class="project-title">NIRIKSHA</h3>
             <p class="project-desc">
-              Smart IoT mesh telemetry, toxic gas, and environmental hazard monitoring system with offline edge intelligence. Features ESP32 sensor nodes communicating over mesh topologies, feeding high-rate telemetry into TimescaleDB and FastAPI.
+              Intelligent environmental hazard monitoring system presented at IEEE R10 ACEI INV.ENT 2026. Employs ESP32 sensor nodes over mesh topologies, feeding high-rate gas and particulate telemetry into TimescaleDB and FastAPI with edge alerts.
             </p>
             <div class="project-tags">
-              <span class="project-tag">TypeScript</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">FastAPI</span>
               <span class="project-tag">ESP32</span>
+              <span class="project-tag">FastAPI</span>
               <span class="project-tag">TimescaleDB</span>
-              <span class="project-tag">MQTT</span>
+              <span class="project-tag">MQTT Mesh</span>
+              <span class="project-tag">React</span>
             </div>
             <div class="project-footer">
               <a href="https://github.com/om29dev/niriksha" target="_blank" rel="noopener noreferrer" class="repo-link">
@@ -484,8 +649,73 @@
             </div>
           </div>
 
-          <!-- 4. WeedSight -->
-          <div class="project-card" data-category="ai">
+          <!-- 3. Civic Aegis (La Trobe Grant) -->
+          <div class="project-card animate-on-scroll" data-category="iot backend" data-featured="true">
+            <div class="project-top">
+              <span class="project-category">Smart Cities / Telemetry</span>
+              <div class="project-links">
+                <span class="project-badge-award">AUD 750 Grant</span>
+                <a href="https://github.com/om29dev/civic_voice" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Civic Aegis repository link">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Civic Aegis</h3>
+            <p class="project-desc">
+              Integrated civic infrastructure telemetry and automated incident response platform. Selected for Phase II of the Technology Infusion Grand Challenge with La Trobe University Australia, funded with an AUD 750 innovation grant.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Smart Cities</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">Cloud Telemetry</span>
+              <span class="project-tag">La Trobe TIGC</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/om29dev/civic_voice" target="_blank" rel="noopener noreferrer" class="repo-link">
+                <span>View Prototype</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Nivora -->
+          <div class="project-card animate-on-scroll" data-category="mobile" data-featured="true">
+            <div class="project-top">
+              <span class="project-category">Mobile Dev Tools</span>
+              <div class="project-links">
+                <a href="https://github.com/om29dev/Nivora" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Nivora GitHub repository">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Nivora</h3>
+            <p class="project-desc">
+              Mobile Android development environment designed for tablets and phones. Embeds a modular code editor, syntax highlighting, integrated terminal via Termux socket bridges, and local git version control inside a touch-friendly interface.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Flutter</span>
+              <span class="project-tag">Dart</span>
+              <span class="project-tag">Android NDK</span>
+              <span class="project-tag">Terminal IPC</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/om29dev/Nivora" target="_blank" rel="noopener noreferrer" class="repo-link">
+                <span>View on GitHub</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. WeedSight -->
+          <div class="project-card animate-on-scroll" data-category="ai" data-featured="true">
             <div class="project-top">
               <span class="project-category">Computer Vision / AgriTech</span>
               <div class="project-links">
@@ -517,8 +747,8 @@
             </div>
           </div>
 
-          <!-- 5. AstroLog -->
-          <div class="project-card" data-category="ai web">
+          <!-- 6. AstroLog -->
+          <div class="project-card animate-on-scroll" data-category="ai backend">
             <div class="project-top">
               <span class="project-category">AI / Database Interface</span>
               <div class="project-links">
@@ -531,7 +761,7 @@
             </div>
             <h3 class="project-title">AstroLog</h3>
             <p class="project-desc">
-              Web application enabling natural language interaction with space mission datasets. Leverages Google Gemini models to translate conversational queries into validated SQL queries executed directly against an SQLite database with instant tabular rendering.
+              Web application enabling natural language querying over space exploration and astronomical mission datasets. Uses Google Gemini to translate conversational prompts into validated SQL queries executed directly against SQLite databases.
             </p>
             <div class="project-tags">
               <span class="project-tag">JavaScript</span>
@@ -549,8 +779,8 @@
             </div>
           </div>
 
-          <!-- 6. Pandharpur City Simulator -->
-          <div class="project-card" data-category="web">
+          <!-- 7. Pandharpur City Simulator -->
+          <div class="project-card animate-on-scroll" data-category="backend">
             <div class="project-top">
               <span class="project-category">3D Graphics / Algorithms</span>
               <div class="project-links">
@@ -581,8 +811,8 @@
             </div>
           </div>
 
-          <!-- 7. Quiz Assessment Server -->
-          <div class="project-card" data-category="iot">
+          <!-- 8. Classroom Assessment Server -->
+          <div class="project-card animate-on-scroll" data-category="backend">
             <div class="project-top">
               <span class="project-category">Backend / Enterprise</span>
               <div class="project-links">
@@ -614,8 +844,8 @@
             </div>
           </div>
 
-          <!-- 8. Tessiq -->
-          <div class="project-card" data-category="mobile">
+          <!-- 9. Tessiq -->
+          <div class="project-card animate-on-scroll" data-category="mobile">
             <div class="project-top">
               <span class="project-category">Mobile Logic Game</span>
               <div class="project-links">
@@ -649,49 +879,177 @@
       </div>
     </section>
 
+    <!-- Certifications & Extra Experience Section -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <span class="section-tag">Learning &amp; Community</span>
+        <h2 class="section-title">Certifications &amp; Activities</h2>
+        <p class="section-subtitle">
+          Continuous upskilling in full-stack architecture, machine learning, modern Java, and student technical community leadership.
+        </p>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Alphabyte Winner -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">Hackathon Victory</span>
+                <h3 class="cert-title">1st Place Winner - Alphabyte 3.0</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">GDG On Campus, PCCOE</div>
+            <p class="cert-desc">
+              National-level 24-hour sprint. Delivered complete backend architecture, database schemas, and microservice integration under high stakes.
+            </p>
+          </div>
+
+          <!-- Cert 2: Full-Stack Web Development -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">Course Certification</span>
+                <h3 class="cert-title">The Complete Full-Stack Web Development Bootcamp</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">Full-Stack Curriculum</div>
+            <p class="cert-desc">
+              Comprehensive training covering modern frontend frameworks, RESTful API design, database modeling, and end-to-end full-stack architectures.
+            </p>
+          </div>
+
+          <!-- Cert 3: Artificial Intelligence Upskilling -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">Course Certification</span>
+                <h3 class="cert-title">Artificial Intelligence Upskilling Course</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">Applied AI Curriculum</div>
+            <p class="cert-desc">
+              Hands-on mastery of machine learning workflows, deep neural networks, computer vision classification, and object detection frameworks.
+            </p>
+          </div>
+
+          <!-- Cert 4: Java Masterclass 2025 -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">130+ Hours Expert Lessons</span>
+                <h3 class="cert-title">Java Masterclass 2025</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">In-Depth Java Specialization</div>
+            <p class="cert-desc">
+              Advanced object-oriented programming, concurrency, multithreading, JVM memory management, and modern enterprise backend patterns.
+            </p>
+          </div>
+
+          <!-- Cert 5: SPECTRUM'25 Volunteer -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">Community Leadership</span>
+                <h3 class="cert-title">Blind Coding Team Volunteer</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">SPECTRUM'25, PCCOE</div>
+            <p class="cert-desc">
+              Organized and supervised algorithmic blind coding contests, preparing challenge sets and supporting student participants.
+            </p>
+          </div>
+
+          <!-- Cert 6: PCCOE Academic Standing -->
+          <div class="cert-card animate-on-scroll">
+            <div class="cert-top">
+              <div class="cert-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+              <div>
+                <span class="cert-type">B.Tech Degree</span>
+                <h3 class="cert-title">Information Technology</h3>
+              </div>
+            </div>
+            <div class="cert-issuer">PCCOE Pune (2024 - 2028)</div>
+            <p class="cert-desc">
+              Active engineering student pursuing core computer systems, algorithms, database systems, and networking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="section">
       <div class="container">
-        <span class="section-tag">Academic Background</span>
-        <h2 class="section-title">Education &amp; Core Foundation</h2>
+        <span class="section-tag">Academic Foundation</span>
+        <h2 class="section-title">Education &amp; Institution</h2>
         <p class="section-subtitle">
-          Formal engineering grounding combined with rigorous self-directed development.
+          Rigorous engineering coursework paired with persistent independent laboratory exploration and prototype construction.
         </p>
 
         <div class="edu-activity-grid">
-          <div class="timeline-card">
+          <div class="timeline-card animate-on-scroll">
             <div class="timeline-header">
-              <h3 class="timeline-role">B.Tech in Information Technology</h3>
-              <span class="timeline-period">Undergraduate</span>
+              <h3 class="timeline-role">Bachelor of Technology (B.Tech), Information Technology</h3>
+              <span class="timeline-period">September 2024 - May 2028</span>
             </div>
             <div class="timeline-institution">Pimpri Chinchwad College of Engineering (PCCOE), Pune</div>
             <p class="timeline-desc">
-              Engaged in comprehensive study of computer systems, algorithmic complexity, database architecture, and software design principles. Active in academic laboratory submissions and practical technical projects.
+              Rigorous curriculum covering computer systems, algorithmic complexity, database design, operating systems, and computer networks. Active in collaborative hackathon teams, technical student societies, and departmental prototyping.
             </p>
             <div class="coursework-list">
               <span class="coursework-item">Data Structures &amp; Algorithms</span>
               <span class="coursework-item">Database Management Systems</span>
-              <span class="coursework-item">Object-Oriented Programming</span>
+              <span class="coursework-item">Object-Oriented Programming (Java / C++)</span>
               <span class="coursework-item">Computer Networks</span>
               <span class="coursework-item">Operating Systems</span>
-              <span class="coursework-item">Software Engineering</span>
+              <span class="coursework-item">Software Engineering &amp; Architecture</span>
             </div>
           </div>
 
-          <div class="timeline-card">
+          <div class="timeline-card animate-on-scroll">
             <div class="timeline-header">
-              <h3 class="timeline-role">Practical Engineering Practice</h3>
-              <span class="timeline-period">Ongoing</span>
+              <h3 class="timeline-role">Self-Directed Engineering &amp; Open Source</h3>
+              <span class="timeline-period">Ongoing Practical Practice</span>
             </div>
-            <div class="timeline-institution">Continuous Project Development &amp; Open Source</div>
+            <div class="timeline-institution">Applied Prototyping &amp; Hackathon Competition</div>
             <p class="timeline-desc">
-              Applying coursework into real-world code repositories: creating native Android developer environments, IoT hazard mesh networks with ESP32 microcontrollers, and computer vision models for precision farming.
+              Translating textbook concepts into functional solutions: architecting high-throughput FastAPI microservices, developing cross-platform Flutter applications, deploying quantized edge computer vision models, and building ESP32 IoT mesh telemetry hardware.
             </p>
             <div class="coursework-list">
               <span class="coursework-item">Full-Stack Development</span>
-              <span class="coursework-item">Microservices &amp; REST APIs</span>
-              <span class="coursework-item">Deep Learning Pipelines</span>
-              <span class="coursework-item">Edge Device Optimization</span>
+              <span class="coursework-item">Distributed IoT Meshes</span>
+              <span class="coursework-item">Edge Object Detection (YOLO)</span>
+              <span class="coursework-item">Relational Schema Optimization</span>
             </div>
           </div>
         </div>
@@ -701,21 +1059,21 @@
     <!-- Live GitHub Activity -->
     <section id="activity" class="section">
       <div class="container">
-        <span class="section-tag">Activity</span>
-        <h2 class="section-title">GitHub Statistics</h2>
+        <span class="section-tag">Open Source Activity</span>
+        <h2 class="section-title">GitHub Statistics &amp; Metrics</h2>
         <p class="section-subtitle">
           Real-time metrics and language distribution across repositories hosted at <a href="https://github.com/om29dev" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">github.com/om29dev</a>.
         </p>
 
         <div class="github-activity-wrap">
-          <div class="github-widget-card">
-            <img id="github-stats-img" class="github-widget-img" src="https://github-stats-extended.vercel.app/api?username=om29dev&hide_rank=true&theme=github_dark&hide_border=true" alt="Om Rajendra Bharambe GitHub statistics">
+          <div class="github-widget-card animate-on-scroll">
+            <img id="github-stats-img" class="github-widget-img" src="https://github-stats-extended.vercel.app/api?username=om29dev&hide_rank=true&theme=default&hide_border=true" alt="Om Bharambe GitHub statistics">
           </div>
-          <div class="github-widget-card">
-            <img id="github-langs-img" class="github-widget-img" src="https://github-stats-extended.vercel.app/api/top-langs/?username=om29dev&layout=compact&langs_count=8&count_weight=.8&theme=github_dark&hide_border=true" alt="Most used programming languages by repository">
+          <div class="github-widget-card animate-on-scroll">
+            <img id="github-langs-img" class="github-widget-img" src="https://github-stats-extended.vercel.app/api/top-langs/?username=om29dev&layout=compact&langs_count=8&count_weight=.8&theme=default&hide_border=true" alt="Most used programming languages by repository">
           </div>
-          <div class="github-widget-card">
-            <img id="github-streak-img" class="github-widget-img" src="https://streak-stats.demolab.com?user=om29dev&theme=github_dark&hide_border=true" alt="GitHub contribution streak">
+          <div class="github-widget-card animate-on-scroll">
+            <img id="github-streak-img" class="github-widget-img" src="https://streak-stats.demolab.com?user=om29dev&theme=default&hide_border=true" alt="GitHub contribution streak">
           </div>
         </div>
       </div>
@@ -727,13 +1085,13 @@
         <span class="section-tag">Get In Touch</span>
         <h2 class="section-title">Let's Connect</h2>
         <p class="section-subtitle">
-          I am currently open to software engineering internships, entry-level engineering roles, and open-source collaborations.
+          Open to software engineering internships, technical collaborations, open-source initiatives, and exciting engineering projects.
         </p>
 
         <div class="contact-grid">
-          <div class="contact-info">
+          <div class="contact-info animate-on-scroll">
             <p>
-              Feel free to reach out directly via email, connect on LinkedIn, or review ongoing code submissions on GitHub.
+              Feel free to reach out directly via email, message on WhatsApp, or connect on LinkedIn. I am always happy to discuss software architecture, interesting engineering problems, or potential internship opportunities.
             </p>
 
             <div class="contact-channels">
@@ -747,12 +1105,35 @@
                   </div>
                   <div>
                     <div class="channel-label">Email</div>
-                    <div class="channel-value">ombharambe29@gmail.com</div>
+                    <div class="channel-value">ombharambe901@gmail.com</div>
                   </div>
                 </div>
-                <button type="button" class="copy-btn js-copy-email" data-email="ombharambe29@gmail.com">
+                <button type="button" class="copy-btn js-copy-btn" data-copy-text="ombharambe901@gmail.com" data-copy-label="Email copied to clipboard">
                   Copy
                 </button>
+              </div>
+
+              <!-- Phone / WhatsApp -->
+              <div class="contact-channel-item">
+                <div class="channel-left">
+                  <div class="channel-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="channel-label">Mobile &amp; WhatsApp</div>
+                    <div class="channel-value">+91 8421936775</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                  <a href="https://wa.me/918421936775" target="_blank" rel="noopener noreferrer" class="btn-sm btn-outline">
+                    Chat
+                  </a>
+                  <button type="button" class="copy-btn js-copy-btn" data-copy-text="+91 8421936775" data-copy-label="Phone number copied to clipboard">
+                    Copy
+                  </button>
+                </div>
               </div>
 
               <!-- LinkedIn -->
@@ -764,11 +1145,11 @@
                     </svg>
                   </div>
                   <div>
-                    <div class="channel-label">Professional Network</div>
+                    <div class="channel-label">LinkedIn</div>
                     <div class="channel-value">linkedin.com/in/om29dev</div>
                   </div>
                 </div>
-                <span class="btn-sm btn-outline">Visit</span>
+                <span class="btn-sm btn-outline">Connect</span>
               </a>
 
               <!-- GitHub -->
@@ -780,46 +1161,30 @@
                     </svg>
                   </div>
                   <div>
-                    <div class="channel-label">Source Code</div>
+                    <div class="channel-label">GitHub</div>
                     <div class="channel-value">github.com/om29dev</div>
                   </div>
                 </div>
-                <span class="btn-sm btn-outline">Visit</span>
-              </a>
-
-              <!-- WhatsApp -->
-              <a href="https://wa.me/918421936775" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
-                <div class="channel-left">
-                  <div class="channel-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="channel-label">Direct Messaging</div>
-                    <div class="channel-value">+91 8421936775</div>
-                  </div>
-                </div>
-                <span class="btn-sm btn-outline">Message</span>
+                <span class="btn-sm btn-outline">Explore</span>
               </a>
             </div>
           </div>
 
           <!-- Contact Form -->
-          <div class="contact-form-card">
+          <div class="contact-form-card animate-on-scroll">
             <h3 class="contact-form-title">Send a Quick Message</h3>
             <form id="contact-form">
               <div class="form-group">
                 <label for="form-name" class="form-label">Your Name</label>
-                <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Smith" required>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. John Doe" required>
               </div>
               <div class="form-group">
                 <label for="form-email" class="form-label">Your Email</label>
-                <input type="email" id="form-email" class="form-input" placeholder="e.g. alex@example.com" required>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. john@example.com" required>
               </div>
               <div class="form-group">
                 <label for="form-message" class="form-label">Message</label>
-                <textarea id="form-message" class="form-textarea" placeholder="Discuss a project, role, or collaboration..." required></textarea>
+                <textarea id="form-message" class="form-textarea" placeholder="Discuss an internship, project, or collaboration..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary" style="width: 100%;">
                 Send Message
@@ -836,7 +1201,7 @@
     <div class="container footer-content">
       <div class="footer-left">
         <span class="footer-brand">om29dev</span>
-        <span class="footer-copy">Crafted for GitHub Pages. &copy; Om Rajendra Bharambe. All rights reserved.</span>
+        <span class="footer-copy">Designed &amp; Built by Om Rajendra Bharambe. Hosted on GitHub Pages.</span>
       </div>
       <div class="footer-socials">
         <a href="https://github.com/om29dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub">
@@ -847,11 +1212,6 @@
         <a href="https://www.linkedin.com/in/om29dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-        </a>
-        <a href="https://x.com/om29dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="X (formerly Twitter)">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </a>
       </div>
