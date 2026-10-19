@@ -6,33 +6,35 @@ Hosted live on GitHub Pages: [https://om29dev.github.io](https://om29dev.github.
 
 ## Overview
 
-A clean, responsive, and performance-focused portfolio site showcasing software engineering projects, technical skills, academic background, and contact channels. Built with vanilla web standards for fast load times and zero build dependencies.
+A clean, responsive, performance-focused portfolio site showcasing software engineering projects, hackathon victories, technical skills, certifications, and contact channels. Built with vanilla web standards for fast load times and zero build dependencies.
 
 ## Structure
 
 ```
 om29dev.github.io/
-|-- index.html          # Main portfolio markup and content
+|-- index.html          # Semantic HTML structure, hero, milestones, projects
 |-- css/
-|   `-- styles.css      # Core styles, responsive grid, theme variables
+|   `-- styles.css      # Core styles, light/dark themes, animations, responsive grid
 |-- js/
-|   `-- main.js         # Theme toggle, category filters, interactive widgets
+|   `-- main.js         # Theme toggle, animated counters, category filters, copy feedback
 |-- assets/
-|   |-- avatar.png      # Profile picture
+|   |-- om-portrait.webp # Optimized hero portrait image
+|   |-- om-portrait.png  # High-resolution hero portrait fallback
+|   |-- avatar.png      # Profile picture backup
 |   `-- favicon.svg     # Vector favicon
 `-- README.md           # Documentation
 ```
 
-## Featured Projects
+## Key Highlights
 
-- **Civic Voice (CVI)**: Voice-first civic services platform built with Flutter and AWS Bedrock.
-- **Nivora**: AI-assisted Android development workstation and mobile IDE built with Flutter.
-- **NIRIKSHA**: Smart IoT mesh telemetry and hazard monitoring system with ESP32 and FastAPI.
-- **WeedSight**: Precision agriculture weed detection pipeline using YOLO26 and ONNX runtime.
-- **AstroLog**: Natural language interface for space mission data with Google Gemini and SQLite.
-- **Pandharpur 3D Digital Twin**: Interactive 3D city simulator and DAA algorithm visualization with Three.js.
-- **Classroom Assessment Server**: Spring Boot REST API for classroom management and evaluation.
-- **Tessiq**: Minimalist number puzzle game with recursive backtracking logic in Flutter.
+- **Light Theme by Default**: Clean, modern aesthetics with subtle mesh glow effects, crisp typography, and an optional dark mode toggle.
+- **Hackathon Victories & Grants**:
+  - 1st Place Winner: Alphabyte 3.0 National Level Hackathon (GDG On Campus, PCCOE)
+  - 1st Place Round 1 & 3rd Prize Finals: IEEE R10 ACEI INV.ENT Pitch Competition 2026 (NIRIKSHA)
+  - Phase II Qualifier & AUD 750 Innovation Grant: Technology Infusion Grand Challenge (La Trobe University, Australia)
+  - Top Innovator Shortlist: AI for Bharat Hackathon (AWS & PCCOE)
+- **Featured Projects**: Civic Voice, NIRIKSHA, Civic Aegis, Nivora, WeedSight, AstroLog, Pandharpur 3D Digital Twin, Classroom Assessment Server, and Tessiq.
+- **Micro-Animations**: Floating achievement badges, ambient drifting glow blobs, animated metric counters, and smooth card reveals on scroll.
 
 ## Local Development
 
