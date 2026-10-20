@@ -10,22 +10,23 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
-  // Light theme by default as requested
+  // Light theme by default
   const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('theme');
+    localStorage.removeItem('theme');
+    const saved = localStorage.getItem('portfolio_theme');
     if (saved) {
       return saved === 'dark';
     }
-    return false; // Default to light mode
+    return false; // Default to light theme
   });
 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('portfolio_theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem('portfolio_theme', 'light');
     }
   }, [darkMode]);
 
@@ -49,3 +50,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

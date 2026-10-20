@@ -53,7 +53,7 @@ export const Contact: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Phone Card */}
-            <div className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-between">
+            <div className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex items-center justify-between">
               <div className="flex items-center gap-3.5">
                 <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400">
                   <Phone size={20} />
@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Email Card */}
-            <div className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm flex items-center justify-between">
+            <div className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex items-center justify-between">
               <div className="flex items-center gap-3.5">
                 <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400">
                   <Mail size={20} />
@@ -118,7 +118,7 @@ export const Contact: React.FC = () => {
                 href={personalInfo.contacts.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+                className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group"
               >
                 <div className="flex items-center justify-between">
                   <LinkedinIcon size={22} className="text-blue-600 dark:text-blue-400" />
@@ -136,7 +136,7 @@ export const Contact: React.FC = () => {
                 href={personalInfo.contacts.github}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+                className="rounded-2xl p-5 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group"
               >
                 <div className="flex items-center justify-between">
                   <GithubIcon size={22} className="text-slate-900 dark:text-white" />
@@ -152,7 +152,7 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Location Pill */}
-            <div className="p-4 rounded-2xl bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
+            <div className="p-4 rounded-2xl bg-slate-100/90 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 flex items-center gap-3 text-xs text-slate-600 dark:text-slate-300">
               <MapPin size={16} className="text-rose-500 flex-shrink-0" />
               <span>Based in Pune / Pimpri-Chinchwad, Maharashtra, India (IST / UTC+5:30)</span>
             </div>
@@ -161,7 +161,7 @@ export const Contact: React.FC = () => {
 
           {/* Quick Message Form */}
           <div className="lg:col-span-7">
-            <div className="rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+            <div className="rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm">
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
                 Send a Direct Message
               </h3>
@@ -181,7 +181,7 @@ export const Contact: React.FC = () => {
                       placeholder="e.g. Alex Sharma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-all"
                     />
                   </div>
                   <div>
@@ -194,7 +194,7 @@ export const Contact: React.FC = () => {
                       placeholder="alex@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-all"
                     />
                   </div>
                 </div>
@@ -209,7 +209,7 @@ export const Contact: React.FC = () => {
                     placeholder="Project collaboration / Internship discussion"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                    className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-all"
                   />
                 </div>
 
@@ -223,7 +223,7 @@ export const Contact: React.FC = () => {
                     placeholder="Briefly describe what you would like to discuss or collaborate on..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-y"
+                    className="w-full px-3.5 py-2.5 rounded-xl text-sm bg-slate-50 dark:bg-slate-800/80 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus:bg-white focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/40 transition-all resize-y"
                   />
                 </div>
 
@@ -244,3 +244,4 @@ export const Contact: React.FC = () => {
     </section>
   );
 };
+

@@ -25,7 +25,7 @@ export const Education: React.FC = () => {
         </div>
 
         {/* Education Card */}
-        <div className="rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+        <div className="rounded-2xl p-6 sm:p-8 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
             <div className="flex items-start gap-3.5">
               <div className="p-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
@@ -45,11 +45,11 @@ export const Education: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap md:flex-col items-start md:items-end gap-2 text-xs font-mono text-slate-500 dark:text-slate-400">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
                 <Calendar size={13} />
                 {education.period}
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 border border-slate-200/60 dark:border-slate-700/60">
                 <MapPin size={13} />
                 {education.location}
               </span>
@@ -65,3 +65,4 @@ export const Education: React.FC = () => {
     </section>
   );
 };
+

@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200/70 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 shadow-sm transition-all"
               >
                 Contact Details
               </a>
@@ -210,10 +210,10 @@ export const Hero: React.FC = () => {
 
                 {/* Floating 3D Badge 1: Alphabyte 3.0 Winner */}
                 <div 
-                  className="absolute top-4 -left-3 sm:-left-6 z-20 animate-float-1 px-3 py-2 rounded-xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/90 dark:border-slate-700 shadow-xl"
-                  style={{ transform: 'translateZ(35px)' }}
+                  className="absolute top-2 -left-2 sm:-left-6 z-20 animate-float-1 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
+                  style={{ transform: 'translateZ(65px)' }}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2.5">
                     <div className="p-1.5 rounded-lg bg-amber-500/15 text-amber-600 dark:text-amber-400">
                       <Trophy size={16} />
                     </div>
@@ -230,10 +230,10 @@ export const Hero: React.FC = () => {
 
                 {/* Floating 3D Badge 2: IEEE R10 Finalist */}
                 <div 
-                  className="absolute bottom-16 -right-3 sm:-right-6 z-20 animate-float-2 px-3 py-2 rounded-xl bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/90 dark:border-slate-700 shadow-xl"
-                  style={{ transform: 'translateZ(45px)' }}
+                  className="absolute top-28 -right-2 sm:-right-6 z-20 animate-float-2 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
+                  style={{ transform: 'translateZ(70px)' }}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-2.5">
                     <div className="p-1.5 rounded-lg bg-blue-500/15 text-blue-600 dark:text-blue-400">
                       <Award size={16} />
                     </div>
@@ -250,10 +250,10 @@ export const Hero: React.FC = () => {
 
                 {/* Floating 3D Badge 3: La Trobe AUD 750 Grant */}
                 <div 
-                  className="absolute -bottom-2 left-2 z-20 px-3 py-1.5 rounded-lg bg-emerald-500/10 dark:bg-emerald-950/60 backdrop-blur-md border border-emerald-500/30 text-emerald-700 dark:text-emerald-300 shadow-lg text-[11px] font-semibold flex items-center gap-1.5"
-                  style={{ transform: 'translateZ(25px)' }}
+                  className="absolute bottom-2 -left-2 sm:left-0 z-20 px-3.5 py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-emerald-500/40 text-emerald-700 dark:text-emerald-300 shadow-xl text-xs font-semibold flex items-center gap-2"
+                  style={{ transform: 'translateZ(60px)' }}
                 >
-                  <Sparkles size={13} className="text-emerald-500" />
+                  <Sparkles size={14} className="text-emerald-500" />
                   <span>AUD 750 Grant - La Trobe TIGC</span>
                 </div>
 
@@ -266,3 +266,4 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+

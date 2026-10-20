@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trophy, Award, Sparkles, ChevronDown, ChevronUp, Users, Calendar } from 'lucide-react';
+import { Trophy, Award, Sparkles, ChevronDown, ChevronUp, Users, Calendar, ArrowUpRight } from 'lucide-react';
 import { milestones } from '../data/portfolioData';
 
 export const Milestones: React.FC = () => {
@@ -30,7 +30,7 @@ export const Milestones: React.FC = () => {
           {visibleMilestones.map((milestone) => (
             <div
               key={milestone.id}
-              className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between relative group"
+              className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between relative group"
             >
               <div>
                 {/* Header with Award & Date */}
@@ -74,16 +74,30 @@ export const Milestones: React.FC = () => {
                 </p>
               </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80">
-                {milestone.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+              {/* Tags & Certificate Link */}
+              <div className="flex flex-wrap items-center justify-between gap-3 mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80">
+                <div className="flex flex-wrap gap-1.5">
+                  {milestone.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {milestone.certificateUrl && (
+                  <a
+                    href={milestone.certificateUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 border border-blue-200 dark:border-blue-800 transition-colors"
                   >
-                    {tag}
-                  </span>
-                ))}
+                    <span>View Proof</span>
+                    <ArrowUpRight size={13} className="opacity-70" />
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -111,3 +125,4 @@ export const Milestones: React.FC = () => {
     </section>
   );
 };
+

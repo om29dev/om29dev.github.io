@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Monitor, Server, Cpu, Brain } from 'lucide-react';
+import { Code2, Monitor, Server, Cpu, Brain, Wrench } from 'lucide-react';
 import { skillGroups } from '../data/portfolioData';
 
 export const Skills: React.FC = () => {
@@ -15,6 +15,8 @@ export const Skills: React.FC = () => {
         return <Brain size={16} className="text-purple-500" />;
       case 'IoT & Embedded':
         return <Cpu size={16} className="text-emerald-500" />;
+      case 'Tools & DevOps':
+        return <Wrench size={16} className="text-amber-500" />;
       default:
         return <Code2 size={16} className="text-blue-500" />;
     }
@@ -44,7 +46,7 @@ export const Skills: React.FC = () => {
           {skillGroups.map((group) => (
             <div
               key={group.category}
-              className="rounded-2xl p-6 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm"
+              className="rounded-2xl p-6 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between"
             >
               <div className="flex items-center gap-2.5 mb-4">
                 <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
@@ -73,3 +75,4 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
+

@@ -23,7 +23,10 @@ export interface Milestone {
   description: string;
   tags: string[];
   grant?: string;
+  certificateUrl?: string;
 }
+
+export type CertificationCategory = 'all' | 'competitions' | 'courses' | 'workshops';
 
 export interface Certification {
   id: string;
@@ -32,9 +35,14 @@ export interface Certification {
   date: string;
   type: string;
   details?: string;
+  certificateUrl: string;
+  previewUrl: string;
+  verificationUrl?: string;
+  category: 'competitions' | 'courses' | 'workshops';
 }
 
 export interface SkillGroup {
   category: string;
   skills: string[];
 }
+

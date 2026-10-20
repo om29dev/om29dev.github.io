@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --bg-main: #f8fafc;
@@ -74,19 +76,19 @@
 /* Floating animation */
 @keyframes floatGentle {
   0%, 100% {
-    transform: translateY(0px) translateZ(30px);
+    transform: translateY(0px) translateZ(65px);
   }
   50% {
-    transform: translateY(-8px) translateZ(30px);
+    transform: translateY(-8px) translateZ(65px);
   }
 }
 
 @keyframes floatGentleReverse {
   0%, 100% {
-    transform: translateY(0px) translateZ(30px);
+    transform: translateY(0px) translateZ(70px);
   }
   50% {
-    transform: translateY(8px) translateZ(30px);
+    transform: translateY(8px) translateZ(70px);
   }
 }
 
@@ -113,3 +115,4 @@
 .animate-aura {
   animation: pulseAura 8s ease-in-out infinite;
 }
+

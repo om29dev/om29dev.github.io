@@ -37,7 +37,8 @@ export const milestones: Milestone[] = [
     date: '2025',
     team: 'Team Hustlers',
     description: 'Spearheaded backend architecture, relational database design, core application logic, and cross-service integrations during an intensive 24-hour sprint. Competed against university teams across the country to secure first place.',
-    tags: ['Backend Architecture', 'Database Design', 'API Integration', 'Team Lead']
+    tags: ['Backend Architecture', 'Database Design', 'API Integration', 'Team Lead'],
+    certificateUrl: './certificates/gdgc-alphabyte-3-winner.pdf'
   },
   {
     id: 'ieee-r10',
@@ -47,7 +48,8 @@ export const milestones: Milestone[] = [
     date: '2026',
     team: 'Team Hustlers',
     description: 'Engineered and demonstrated NIRIKSHA, a functional environmental monitoring and early-hazard alert system prototype. Recognized by IEEE Pune Section and faculty evaluators for feasibility, real-world utility, and hardware-software integration.',
-    tags: ['IoT Sensor Mesh', 'Hazard Detection', 'Embedded Systems', 'Hardware Prototype']
+    tags: ['IoT Sensor Mesh', 'Hazard Detection', 'Embedded Systems', 'Hardware Prototype'],
+    certificateUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.pdf'
   },
   {
     id: 'latrobe-tigc',
@@ -68,7 +70,8 @@ export const milestones: Milestone[] = [
     date: '2025',
     team: 'Team Hustlers',
     description: 'Selected as Top Innovator for project Jago Bharat Jago and advanced into the Prototype Development Phase, utilizing AWS cloud services to construct an accessible intelligence layer for civic challenges.',
-    tags: ['Artificial Intelligence', 'AWS Cloud', 'Civic Tech', 'Edge Model']
+    tags: ['Artificial Intelligence', 'AWS Cloud', 'Civic Tech', 'Edge Model'],
+    certificateUrl: './certificates/aws-hack2skill-ai-for-bharat.pdf'
   }
 ];
 
@@ -194,56 +197,191 @@ export const skillGroups: SkillGroup[] = [
   {
     category: 'IoT & Embedded',
     skills: ['ESP32', 'Arduino', 'Sensor Interfacing', 'MQTT', 'Microcontroller Firmware', 'Hardware Prototyping']
+  },
+  {
+    category: 'Tools & DevOps',
+    skills: ['Git & GitHub', 'Docker', 'Linux', 'Postman', 'CI/CD Pipelines', 'Vercel', 'VS Code']
   }
 ];
 
 export const certifications: Certification[] = [
   {
-    id: 'alphabyte-winner',
+    id: 'gdgc-alphabyte-winner',
     title: '1st Place Winner - Alphabyte 3.0 National Hackathon',
-    issuer: 'GDG On Campus, PCCOE',
+    issuer: 'Google Developer Groups On Campus, PCCOE',
     date: '2025',
-    type: 'Competition Award',
-    details: '24-hour national hackathon winner out of competing engineering institutions.'
+    type: 'Hackathon Champion',
+    details: 'Awarded 1st place in the 24-hour national level hackathon as Team Hustlers.',
+    certificateUrl: './certificates/gdgc-alphabyte-3-winner.pdf',
+    previewUrl: './certificates/previews/gdgc-alphabyte-3-winner.png',
+    category: 'competitions'
   },
   {
-    id: 'tigc-grant',
-    title: 'Technology Infusion Grand Challenge Phase II & AUD 750 Grant',
-    issuer: 'La Trobe University, Australia & PCCOE',
-    date: '2025',
-    type: 'Research & Innovation Grant',
-    details: 'International recognition and funding for Civic Aegis smart city telemetry prototype.'
+    id: 'ieee-smart-cities-pitch',
+    title: '3rd Prize - IEEE InvEnt Pitch Competition 2026',
+    issuer: 'IEEE Pune Section & SIG Smart City (with IEEE R10 ACEI)',
+    date: 'Aug 2026',
+    type: 'Competition Podium',
+    details: 'Awarded 3rd prize for outstanding performance in the InvEnt Pitch Competition with Team Hustlers.',
+    certificateUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.pdf',
+    previewUrl: './certificates/previews/ieee-smart-cities-invent-pitch-3rd-prize.png',
+    category: 'competitions'
   },
   {
-    id: 'fullstack-bootcamp',
-    title: 'The Complete Full-Stack Web Development Bootcamp Course',
-    issuer: 'Udemy / Professional Training',
+    id: 'ieee-r10-pitch-position',
+    title: '3rd Position - Inv.Ent Pitch Competition 2025',
+    issuer: 'IEEE Region 10 ACEI & IEEE Pune Section',
     date: '2025',
-    type: 'Technical Certification',
-    details: 'Comprehensive full-stack architecture covering frontends, relational databases, and REST APIs.'
+    type: 'Competition Podium',
+    details: 'Secured 3rd position in the regional entrepreneurship and innovation pitch competition.',
+    certificateUrl: './certificates/ieee-r10-invent-pitch-3rd-position.pdf',
+    previewUrl: './certificates/previews/ieee-r10-invent-pitch-3rd-position.png',
+    category: 'competitions'
   },
   {
-    id: 'ai-upskilling',
+    id: 'aws-ai-bharat',
+    title: 'AI for Bharat Hackathon - Prototype Execution',
+    issuer: 'Amazon Web Services (AWS) & Hack2skill',
+    date: 'March 2026',
+    type: 'National Hackathon',
+    details: 'Successfully built and submitted a qualified prototype demonstrating generative AI tools on AWS (ID: 2026H2S04AIFB-P03086).',
+    certificateUrl: './certificates/aws-hack2skill-ai-for-bharat.pdf',
+    previewUrl: './certificates/previews/aws-hack2skill-ai-for-bharat.png',
+    category: 'competitions'
+  },
+  {
+    id: 'hacktopia-finale',
+    title: 'Hacktopia 2025 - Grand Finale 24-Hour Hackathon',
+    issuer: 'PCCOE ACM Student Chapter & Unstop',
+    date: '2025',
+    type: 'Hackathon Finalist',
+    details: 'Competed in the 24-hour offline hackathon grand finale as Team Hustlers.',
+    certificateUrl: './certificates/hacktopia-2025-grand-finale.pdf',
+    previewUrl: './certificates/previews/hacktopia-2025-grand-finale.png',
+    category: 'competitions'
+  },
+  {
+    id: 'mlsc-bluebit',
+    title: 'Bluebit Hackathon 2025',
+    issuer: 'Microsoft Learn Student Chapter (MLSC), PCCOE',
+    date: '2025',
+    type: 'Hackathon',
+    details: 'Active participation in the 2025 edition of the Bluebit Hackathon.',
+    certificateUrl: './certificates/mlsc-bluebit-hackathon-2025.pdf',
+    previewUrl: './certificates/previews/mlsc-bluebit-hackathon-2025.png',
+    category: 'competitions'
+  },
+  {
+    id: 'nutan-ideathon',
+    title: 'IDEATHON Competition 2025',
+    issuer: 'Nutan Incubation Centre & NMIET Pune',
+    date: '2025',
+    type: 'Innovation Pitch',
+    details: 'Certificate of appreciation for active participation in the campus IDEATHON competition.',
+    certificateUrl: './certificates/nutan-ideathon-2025.pdf',
+    previewUrl: './certificates/previews/nutan-ideathon-2025.png',
+    category: 'competitions'
+  },
+  {
+    id: 'my-job-grow-internship',
+    title: 'Artificial Intelligence Internship Completion',
+    issuer: 'My Job Grow (in collab with IIT Bombay Techfest)',
+    date: 'April 2025',
+    type: 'Internship Completion',
+    details: 'Issued for outstanding achievement in AI and successful execution of advanced project milestones (ID: MJG0824AI809).',
+    certificateUrl: './certificates/my-job-grow-ai-internship.pdf',
+    previewUrl: './certificates/previews/my-job-grow-ai-internship.png',
+    category: 'courses'
+  },
+  {
+    id: 'my-job-grow-declaration',
+    title: 'AI Hybrid Internship Completion Declaration',
+    issuer: 'My Job Grow',
+    date: 'April 2025',
+    type: 'Internship Recommendation',
+    details: 'Official letter of completion covering cloud-based AI model development, data processing, and distributed AI systems.',
+    certificateUrl: './certificates/my-job-grow-ai-internship-declaration.pdf',
+    previewUrl: './certificates/previews/my-job-grow-ai-internship-declaration.png',
+    category: 'courses'
+  },
+  {
+    id: 'my-job-grow-upskilling',
     title: 'Artificial Intelligence Upskilling Course',
-    issuer: 'Professional Technical Certification',
-    date: '2025',
-    type: 'AI / Machine Learning',
-    details: 'Practical applied machine learning, neural networks, and computer vision architectures.'
+    issuer: 'My Job Grow',
+    date: 'March 2025',
+    type: 'AI Course',
+    details: '15 hours of structured curriculum covering applied AI, neural representations, and ML model workflows.',
+    certificateUrl: './certificates/my-job-grow-ai-upskilling-course.pdf',
+    previewUrl: './certificates/previews/my-job-grow-ai-upskilling-course.png',
+    category: 'courses'
   },
   {
-    id: 'java-masterclass',
-    title: 'Java Masterclass 2025: 130+ Hours of Expert Lessons Course',
-    issuer: 'Professional Technical Certification',
-    date: '2025',
-    type: 'Software Engineering',
-    details: '130+ hours of advanced OOP, concurrency, JVM internals, and Enterprise Spring development.'
+    id: 'udemy-fullstack',
+    title: 'The Complete Full-Stack Web Development Bootcamp',
+    issuer: 'Udemy (Dr. Angela Yu)',
+    date: 'Feb 2025',
+    type: 'Professional Bootcamp',
+    details: '61.5 total hours covering React, Node.js, Express, PostgreSQL, MongoDB, REST APIs, and web security.',
+    certificateUrl: './certificates/udemy-fullstack-web-development-bootcamp.pdf',
+    previewUrl: './certificates/previews/udemy-fullstack-web-development-bootcamp.png',
+    verificationUrl: 'https://ude.my/UC-806fe9a7-7a21-445b-acae-cda0526420fb',
+    category: 'courses'
   },
   {
-    id: 'spectrum-volunteer',
-    title: 'Volunteer - Blind Coding Team | SPECTRUM 25',
-    issuer: 'PCCOE Tech Council',
+    id: 'udemy-java',
+    title: 'Java Masterclass 2025: 130+ Hours of Expert Lessons',
+    issuer: 'Udemy (Tim Buchalka)',
+    date: 'Feb 2025',
+    type: 'Professional Masterclass',
+    details: '135.5 total hours of comprehensive Java, OOP design, concurrency, memory models, and JVM internals.',
+    certificateUrl: './certificates/udemy-java-masterclass-2025.pdf',
+    previewUrl: './certificates/previews/udemy-java-masterclass-2025.png',
+    verificationUrl: 'https://ude.my/UC-5ae2b1e6-7aba-4bad-a40b-3164c7e3878d',
+    category: 'courses'
+  },
+  {
+    id: 'gdgc-webdev',
+    title: 'Web Development Workshop (MERN Stack)',
+    issuer: 'Google Developer Groups On Campus, PCCOE',
     date: '2025',
-    type: 'Leadership & Community',
-    details: 'Coordinated technical execution and challenge authoring for campus blind coding competition.'
+    type: 'Technical Workshop',
+    details: 'Certificate of completion for hands-on MERN stack engineering workshop (MongoDB, Express, React, Node.js).',
+    certificateUrl: './certificates/gdgc-web-development-workshop.pdf',
+    previewUrl: './certificates/previews/gdgc-web-development-workshop.png',
+    category: 'workshops'
+  },
+  {
+    id: 'gdgc-flutter',
+    title: 'Flutter Workshop 2025',
+    issuer: 'Google Developer Groups On Campus, PCCOE',
+    date: '2025',
+    type: 'Technical Workshop',
+    details: 'Certificate of completion for mobile application development using Flutter and Dart.',
+    certificateUrl: './certificates/gdgc-flutter-workshop-2025.pdf',
+    previewUrl: './certificates/previews/gdgc-flutter-workshop-2025.png',
+    category: 'workshops'
+  },
+  {
+    id: 'mlsc-techroom',
+    title: 'AI / Data Science TechRoom Session',
+    issuer: 'Microsoft Learn Student Chapter (MLSC), PCCOE',
+    date: '2025',
+    type: 'Technical Seminar',
+    details: 'Certificate of appreciation for active participation in the AI/DS TechRoom technical session.',
+    certificateUrl: './certificates/mlsc-ai-ds-techroom-appreciation.pdf',
+    previewUrl: './certificates/previews/mlsc-ai-ds-techroom-appreciation.png',
+    category: 'workshops'
+  },
+  {
+    id: 'pccoe-spectrum',
+    title: 'Volunteer - Blind Coding Team | SPECTRUM \'25',
+    issuer: 'PCCOE Department of Applied Sciences and Humanities',
+    date: 'March 2025',
+    type: 'Technical Volunteering',
+    details: 'Certificate of appreciation for contributing as a volunteer in the Blind Coding technical team.',
+    certificateUrl: './certificates/pccoe-spectrum-blind-coding-volunteer.pdf',
+    previewUrl: './certificates/previews/pccoe-spectrum-blind-coding-volunteer.png',
+    category: 'workshops'
   }
 ];
+

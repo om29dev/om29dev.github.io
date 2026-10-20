@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Layers, Cpu, Brain } from 'lucide-react';
+import { ChevronDown, ChevronUp, Layers, Cpu, Brain, ArrowUpRight } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { projects } from '../data/portfolioData';
 import { ProjectCategory } from '../types';
@@ -71,12 +71,12 @@ export const Projects: React.FC = () => {
           {displayedProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
+              className="rounded-2xl p-6 sm:p-7 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group"
             >
               <div>
                 {/* Header with Category & Highlight Badge */}
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60">
                     {project.category === 'fullstack' && <Layers size={13} className="text-blue-500" />}
                     {project.category === 'ai' && <Brain size={13} className="text-purple-500" />}
                     {project.category === 'iot' && <Cpu size={13} className="text-emerald-500" />}
@@ -110,7 +110,7 @@ export const Projects: React.FC = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+                      className="px-2.5 py-0.5 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200/50 dark:border-slate-700/50"
                     >
                       {tag}
                     </span>
@@ -124,10 +124,11 @@ export const Projects: React.FC = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors"
                     >
                       <GithubIcon size={14} />
                       <span>View Source Code</span>
+                      <ArrowUpRight size={13} className="opacity-60" />
                     </a>
                   </div>
                 )}
@@ -158,3 +159,4 @@ export const Projects: React.FC = () => {
     </section>
   );
 };
+
