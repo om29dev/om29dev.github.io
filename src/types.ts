@@ -24,6 +24,7 @@ export interface Milestone {
   tags: string[];
   grant?: string;
   certificateUrl?: string;
+  previewUrl?: string;
 }
 
 export type CertificationCategory = 'all' | 'competitions' | 'courses' | 'workshops';
@@ -35,7 +36,7 @@ export interface Certification {
   date: string;
   type: string;
   details?: string;
-  certificateUrl: string;
+  certificateUrl?: string;
   previewUrl: string;
   verificationUrl?: string;
   category: 'competitions' | 'courses' | 'workshops';

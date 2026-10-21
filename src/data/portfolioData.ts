@@ -38,7 +38,7 @@ export const milestones: Milestone[] = [
     team: 'Team Hustlers',
     description: 'Spearheaded backend architecture, relational database design, core application logic, and cross-service integrations during an intensive 24-hour sprint. Competed against university teams across the country to secure first place.',
     tags: ['Backend Architecture', 'Database Design', 'API Integration', 'Team Lead'],
-    certificateUrl: './certificates/gdgc-alphabyte-3-winner.pdf'
+    previewUrl: './certificates/gdgc-alphabyte-3-winner.webp'
   },
   {
     id: 'ieee-r10',
@@ -49,7 +49,7 @@ export const milestones: Milestone[] = [
     team: 'Team Hustlers',
     description: 'Engineered and demonstrated NIRIKSHA, a functional environmental monitoring and early-hazard alert system prototype. Recognized by IEEE Pune Section and faculty evaluators for feasibility, real-world utility, and hardware-software integration.',
     tags: ['IoT Sensor Mesh', 'Hazard Detection', 'Embedded Systems', 'Hardware Prototype'],
-    certificateUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.pdf'
+    previewUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.webp'
   },
   {
     id: 'latrobe-tigc',
@@ -71,7 +71,7 @@ export const milestones: Milestone[] = [
     team: 'Team Hustlers',
     description: 'Selected as Top Innovator for project Jago Bharat Jago and advanced into the Prototype Development Phase, utilizing AWS cloud services to construct an accessible intelligence layer for civic challenges.',
     tags: ['Artificial Intelligence', 'AWS Cloud', 'Civic Tech', 'Edge Model'],
-    certificateUrl: './certificates/aws-hack2skill-ai-for-bharat.pdf'
+    previewUrl: './certificates/aws-hack2skill-ai-for-bharat.webp'
   }
 ];
 
@@ -212,8 +212,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Hackathon Champion',
     details: 'Awarded 1st place in the 24-hour national level hackathon as Team Hustlers.',
-    certificateUrl: './certificates/gdgc-alphabyte-3-winner.pdf',
-    previewUrl: './certificates/previews/gdgc-alphabyte-3-winner.png',
+    previewUrl: './certificates/gdgc-alphabyte-3-winner.webp',
     category: 'competitions'
   },
   {
@@ -223,8 +222,7 @@ export const certifications: Certification[] = [
     date: 'Aug 2026',
     type: 'Competition Podium',
     details: 'Awarded 3rd prize for outstanding performance in the InvEnt Pitch Competition with Team Hustlers.',
-    certificateUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.pdf',
-    previewUrl: './certificates/previews/ieee-smart-cities-invent-pitch-3rd-prize.png',
+    previewUrl: './certificates/ieee-smart-cities-invent-pitch-3rd-prize.webp',
     category: 'competitions'
   },
   {
@@ -234,8 +232,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Competition Podium',
     details: 'Secured 3rd position in the regional entrepreneurship and innovation pitch competition.',
-    certificateUrl: './certificates/ieee-r10-invent-pitch-3rd-position.pdf',
-    previewUrl: './certificates/previews/ieee-r10-invent-pitch-3rd-position.png',
+    previewUrl: './certificates/ieee-r10-invent-pitch-3rd-position.webp',
     category: 'competitions'
   },
   {
@@ -245,8 +242,7 @@ export const certifications: Certification[] = [
     date: 'March 2026',
     type: 'National Hackathon',
     details: 'Successfully built and submitted a qualified prototype demonstrating generative AI tools on AWS (ID: 2026H2S04AIFB-P03086).',
-    certificateUrl: './certificates/aws-hack2skill-ai-for-bharat.pdf',
-    previewUrl: './certificates/previews/aws-hack2skill-ai-for-bharat.png',
+    previewUrl: './certificates/aws-hack2skill-ai-for-bharat.webp',
     category: 'competitions'
   },
   {
@@ -256,8 +252,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Hackathon Finalist',
     details: 'Competed in the 24-hour offline hackathon grand finale as Team Hustlers.',
-    certificateUrl: './certificates/hacktopia-2025-grand-finale.pdf',
-    previewUrl: './certificates/previews/hacktopia-2025-grand-finale.png',
+    previewUrl: './certificates/hacktopia-2025-grand-finale.webp',
     category: 'competitions'
   },
   {
@@ -267,8 +262,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Hackathon',
     details: 'Active participation in the 2025 edition of the Bluebit Hackathon.',
-    certificateUrl: './certificates/mlsc-bluebit-hackathon-2025.pdf',
-    previewUrl: './certificates/previews/mlsc-bluebit-hackathon-2025.png',
+    previewUrl: './certificates/mlsc-bluebit-hackathon-2025.webp',
     category: 'competitions'
   },
   {
@@ -278,8 +272,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Innovation Pitch',
     details: 'Certificate of appreciation for active participation in the campus IDEATHON competition.',
-    certificateUrl: './certificates/nutan-ideathon-2025.pdf',
-    previewUrl: './certificates/previews/nutan-ideathon-2025.png',
+    previewUrl: './certificates/nutan-ideathon-2025.webp',
     category: 'competitions'
   },
   {
@@ -289,8 +282,7 @@ export const certifications: Certification[] = [
     date: 'April 2025',
     type: 'Internship Completion',
     details: 'Issued for outstanding achievement in AI and successful execution of advanced project milestones (ID: MJG0824AI809).',
-    certificateUrl: './certificates/my-job-grow-ai-internship.pdf',
-    previewUrl: './certificates/previews/my-job-grow-ai-internship.png',
+    previewUrl: './certificates/my-job-grow-ai-internship.webp',
     category: 'courses'
   },
   {
@@ -300,8 +292,7 @@ export const certifications: Certification[] = [
     date: 'April 2025',
     type: 'Internship Recommendation',
     details: 'Official letter of completion covering cloud-based AI model development, data processing, and distributed AI systems.',
-    certificateUrl: './certificates/my-job-grow-ai-internship-declaration.pdf',
-    previewUrl: './certificates/previews/my-job-grow-ai-internship-declaration.png',
+    previewUrl: './certificates/my-job-grow-ai-internship-declaration.webp',
     category: 'courses'
   },
   {
@@ -311,8 +302,7 @@ export const certifications: Certification[] = [
     date: 'March 2025',
     type: 'AI Course',
     details: '15 hours of structured curriculum covering applied AI, neural representations, and ML model workflows.',
-    certificateUrl: './certificates/my-job-grow-ai-upskilling-course.pdf',
-    previewUrl: './certificates/previews/my-job-grow-ai-upskilling-course.png',
+    previewUrl: './certificates/my-job-grow-ai-upskilling-course.webp',
     category: 'courses'
   },
   {
@@ -322,8 +312,7 @@ export const certifications: Certification[] = [
     date: 'Feb 2025',
     type: 'Professional Bootcamp',
     details: '61.5 total hours covering React, Node.js, Express, PostgreSQL, MongoDB, REST APIs, and web security.',
-    certificateUrl: './certificates/udemy-fullstack-web-development-bootcamp.pdf',
-    previewUrl: './certificates/previews/udemy-fullstack-web-development-bootcamp.png',
+    previewUrl: './certificates/udemy-fullstack-web-development-bootcamp.webp',
     verificationUrl: 'https://ude.my/UC-806fe9a7-7a21-445b-acae-cda0526420fb',
     category: 'courses'
   },
@@ -334,8 +323,7 @@ export const certifications: Certification[] = [
     date: 'Feb 2025',
     type: 'Professional Masterclass',
     details: '135.5 total hours of comprehensive Java, OOP design, concurrency, memory models, and JVM internals.',
-    certificateUrl: './certificates/udemy-java-masterclass-2025.pdf',
-    previewUrl: './certificates/previews/udemy-java-masterclass-2025.png',
+    previewUrl: './certificates/udemy-java-masterclass-2025.webp',
     verificationUrl: 'https://ude.my/UC-5ae2b1e6-7aba-4bad-a40b-3164c7e3878d',
     category: 'courses'
   },
@@ -346,8 +334,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Technical Workshop',
     details: 'Certificate of completion for hands-on MERN stack engineering workshop (MongoDB, Express, React, Node.js).',
-    certificateUrl: './certificates/gdgc-web-development-workshop.pdf',
-    previewUrl: './certificates/previews/gdgc-web-development-workshop.png',
+    previewUrl: './certificates/gdgc-web-development-workshop.webp',
     category: 'workshops'
   },
   {
@@ -357,8 +344,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Technical Workshop',
     details: 'Certificate of completion for mobile application development using Flutter and Dart.',
-    certificateUrl: './certificates/gdgc-flutter-workshop-2025.pdf',
-    previewUrl: './certificates/previews/gdgc-flutter-workshop-2025.png',
+    previewUrl: './certificates/gdgc-flutter-workshop-2025.webp',
     category: 'workshops'
   },
   {
@@ -368,8 +354,7 @@ export const certifications: Certification[] = [
     date: '2025',
     type: 'Technical Seminar',
     details: 'Certificate of appreciation for active participation in the AI/DS TechRoom technical session.',
-    certificateUrl: './certificates/mlsc-ai-ds-techroom-appreciation.pdf',
-    previewUrl: './certificates/previews/mlsc-ai-ds-techroom-appreciation.png',
+    previewUrl: './certificates/mlsc-ai-ds-techroom-appreciation.webp',
     category: 'workshops'
   },
   {
@@ -379,8 +364,7 @@ export const certifications: Certification[] = [
     date: 'March 2025',
     type: 'Technical Volunteering',
     details: 'Certificate of appreciation for contributing as a volunteer in the Blind Coding technical team.',
-    certificateUrl: './certificates/pccoe-spectrum-blind-coding-volunteer.pdf',
-    previewUrl: './certificates/previews/pccoe-spectrum-blind-coding-volunteer.png',
+    previewUrl: './certificates/pccoe-spectrum-blind-coding-volunteer.webp',
     category: 'workshops'
   }
 ];

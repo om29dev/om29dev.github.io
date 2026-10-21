@@ -5,7 +5,8 @@ import {
   ChevronUp, 
   Calendar, 
   ExternalLink, 
-  FileText, 
+  Download, 
+  Loader2, 
   Maximize2, 
   X, 
   Trophy, 
@@ -14,11 +15,24 @@ import {
 } from 'lucide-react';
 import { certifications } from '../data/portfolioData';
 import { Certification, CertificationCategory } from '../types';
+import { downloadCertificatePdf } from '../utils/downloadCertificatePdf';
 
 export const Certifications: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<CertificationCategory>('all');
   const [expanded, setExpanded] = useState(false);
   const [activeModalCert, setActiveModalCert] = useState<Certification | null>(null);
+  const [downloadingId, setDownloadingId] = useState<string | null>(null);
+
+  const handleDownload = async (cert: Certification) => {
+    try {
+      setDownloadingId(cert.id);
+      await downloadCertificatePdf(cert.previewUrl, cert.title);
+    } catch (err) {
+      console.error('Failed to generate PDF:', err);
+    } finally {
+      setDownloadingId(null);
+    }
+  };
 
   // Close modal on ESC key
   useEffect(() => {
@@ -160,17 +174,22 @@ export const Certifications: React.FC = () => {
                 )}
               </div>
 
-              {/* Action Buttons: View PDF & Verify */}
+              {/* Action Buttons: Download PDF & Verify */}
               <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
-                <a
-                  href={cert.certificateUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleDownload(cert)}
+                  disabled={downloadingId === cert.id}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors disabled:opacity-60 cursor-pointer"
+                  title="Download certificate PDF"
                 >
-                  <FileText size={13} />
-                  <span>Open PDF Document</span>
-                </a>
+                  {downloadingId === cert.id ? (
+                    <Loader2 size={13} className="animate-spin" />
+                  ) : (
+                    <Download size={13} />
+                  )}
+                  <span>Download PDF</span>
+                </button>
 
                 {cert.verificationUrl && (
                   <a
@@ -269,15 +288,20 @@ export const Certifications: React.FC = () => {
                     <ExternalLink size={13} />
                   </a>
                 )}
-                <a
-                  href={activeModalCert.certificateUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleDownload(activeModalCert)}
+                  disabled={downloadingId === activeModalCert.id}
+                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-colors disabled:opacity-60 cursor-pointer"
+                  title="Download certificate PDF"
                 >
-                  <FileText size={13} />
-                  <span>Open Full PDF</span>
-                </a>
+                  {downloadingId === activeModalCert.id ? (
+                    <Loader2 size={13} className="animate-spin" />
+                  ) : (
+                    <Download size={13} />
+                  )}
+                  <span>Download PDF</span>
+                </button>
               </div>
             </div>
 

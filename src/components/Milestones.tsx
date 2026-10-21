@@ -1,10 +1,24 @@
 import React, { useState } from 'react';
-import { Trophy, Award, Sparkles, ChevronDown, ChevronUp, Users, Calendar, ArrowUpRight } from 'lucide-react';
+import { Trophy, Award, Sparkles, ChevronDown, ChevronUp, Users, Calendar, Download, Loader2 } from 'lucide-react';
 import { milestones } from '../data/portfolioData';
+import { downloadCertificatePdf } from '../utils/downloadCertificatePdf';
 
 export const Milestones: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
+  const [downloadingId, setDownloadingId] = useState<string | null>(null);
   const visibleMilestones = expanded ? milestones : milestones.slice(0, 2);
+
+  const handleDownload = async (milestone: (typeof milestones)[number]) => {
+    if (!milestone.previewUrl) return;
+    try {
+      setDownloadingId(milestone.id);
+      await downloadCertificatePdf(milestone.previewUrl, `${milestone.title} - ${milestone.competition}`);
+    } catch (err) {
+      console.error('Failed to generate PDF:', err);
+    } finally {
+      setDownloadingId(null);
+    }
+  };
 
   return (
     <section id="milestones" className="py-16 scroll-mt-20 border-t border-slate-200/80 dark:border-slate-800/80">
@@ -87,16 +101,21 @@ export const Milestones: React.FC = () => {
                   ))}
                 </div>
 
-                {milestone.certificateUrl && (
-                  <a
-                    href={milestone.certificateUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 border border-blue-200 dark:border-blue-800 transition-colors"
+                {milestone.previewUrl && (
+                  <button
+                    type="button"
+                    onClick={() => handleDownload(milestone)}
+                    disabled={downloadingId === milestone.id}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 border border-blue-200 dark:border-blue-800 transition-colors disabled:opacity-60 cursor-pointer"
+                    title="Download award certificate PDF"
                   >
-                    <span>View Proof</span>
-                    <ArrowUpRight size={13} className="opacity-70" />
-                  </a>
+                    {downloadingId === milestone.id ? (
+                      <Loader2 size={13} className="animate-spin" />
+                    ) : (
+                      <Download size={13} />
+                    )}
+                    <span>Download PDF</span>
+                  </button>
                 )}
               </div>
             </div>

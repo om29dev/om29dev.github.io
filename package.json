@@ -17,6 +17,7 @@
   },
   "homepage": "https://om29dev.github.io",
   "dependencies": {
+    "jspdf": "^4.2.1",
     "lucide-react": "^1.59.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
