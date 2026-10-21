@@ -11,12 +11,11 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Milestones', href: '#milestones' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Education', href: '#education' },
+    { label: 'Milestones', href: '#milestones' },
     { label: 'Certifications', href: '#certifications' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Education', href: '#education' },
   ];
 
   return (
@@ -25,17 +24,10 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:bg-blue-700 transition-colors">
-              OB
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-slate-900 dark:text-white text-base tracking-tight leading-tight">
-                {personalInfo.name}
-              </span>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
-                github.com/om29dev
-              </span>
-            </div>
+            <img src="./favicon.svg" alt="Logo" className="w-8 h-8 rounded-lg" />
+            <span className="font-bold text-slate-900 dark:text-white text-base tracking-tight">
+              {personalInfo.name}
+            </span>
           </a>
 
           {/* Desktop Navigation */}

@@ -47,3 +47,20 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface EducationItem {
+  id: string;
+  institution: string;
+  degree: string;
+  field?: string;
+  period: string;
+  location: string;
+  score?: string;
+  scoreLabel?: string;
+  badge?: string;
+  details: string;
+  logoUrl?: string;
+  previewUrl?: string;
+  subjects?: string[];
+}
+
+

@@ -8,6 +8,7 @@ import { Education } from './components/Education';
 import { Certifications } from './components/Certifications';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 
 export const App: React.FC = () => {
   // Light theme by default
@@ -17,7 +18,7 @@ export const App: React.FC = () => {
     if (saved) {
       return saved === 'dark';
     }
-    return false; // Default to light theme
+    return true; // Default to dark theme
   });
 
   useEffect(() => {
@@ -36,15 +37,16 @@ export const App: React.FC = () => {
       
       <main>
         <Hero />
-        <Milestones />
         <Projects />
         <Skills />
-        <Education />
+        <Milestones />
         <Certifications />
+        <Education />
         <Contact />
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

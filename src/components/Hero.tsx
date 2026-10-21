@@ -4,21 +4,16 @@ import {
   Award, 
   Sparkles, 
   ArrowUpRight, 
-  Mail, 
-  Phone, 
-  Copy, 
-  Check, 
   MapPin, 
   GraduationCap 
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from './Icons';
 import { personalInfo } from '../data/portfolioData';
+import { Typewriter } from './Typewriter';
 
 export const Hero: React.FC = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
-  const [copiedField, setCopiedField] = useState<string | null>(null);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
@@ -40,14 +35,8 @@ export const Hero: React.FC = () => {
     setIsHovered(true);
   };
 
-  const copyToClipboard = (text: string, field: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedField(field);
-    setTimeout(() => setCopiedField(null), 2000);
-  };
-
   return (
-    <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+    <section className="relative pt-6 sm:pt-8 lg:pt-10 pb-6 sm:pb-8 lg:pb-8 overflow-hidden">
       {/* Ambient background glow accents */}
       <div 
         aria-hidden="true" 
@@ -55,10 +44,10 @@ export const Hero: React.FC = () => {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-start lg:items-center">
           
           {/* Left Column: Bio & Core Info */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             
             {/* Live Availability Status */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold tracking-wide">
@@ -71,15 +60,22 @@ export const Hero: React.FC = () => {
 
             {/* Main Headline */}
             <div>
-              <p className="text-sm sm:text-base font-semibold text-blue-600 dark:text-blue-400 tracking-wide uppercase font-mono">
+              <p className="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 tracking-wide uppercase font-mono">
                 Software Engineer & Prototyper
               </p>
               <h1 className="mt-1 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
                 {personalInfo.name}
               </h1>
-              <p className="mt-2 text-lg sm:text-xl font-medium text-slate-700 dark:text-slate-300">
-                {personalInfo.headline}
-              </p>
+              <div className="mt-1.5 min-h-[1.75rem] sm:min-h-[2rem] flex items-center">
+                <p className="text-base sm:text-lg lg:text-xl font-semibold text-slate-800 dark:text-slate-200">
+                  <Typewriter
+                    words={personalInfo.roles}
+                    typingSpeed={75}
+                    deletingSpeed={35}
+                    pauseDelay={2200}
+                  />
+                </p>
+              </div>
             </div>
 
             {/* Education and Location Micro-Badges */}
@@ -95,14 +91,14 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Concise Human Narrative */}
-            <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
               Curious about what can be built, improved, or engineered differently. 
               Hands-on builder with a focus on taking ideas from initial concepts to functional prototypes: 
               architecting scalable web backends, training edge computer vision models, and engineering distributed IoT hardware.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-1">
               <a
                 href="#projects"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transition-all"
@@ -124,49 +120,6 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Direct Contact & Social Chips */}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-2.5">
-              <button
-                onClick={() => copyToClipboard(personalInfo.contacts.phone, 'phone')}
-                title="Click to copy phone number"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950/40 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors"
-              >
-                <Phone size={13} />
-                <span>{personalInfo.contacts.phone}</span>
-                {copiedField === 'phone' ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} className="opacity-60" />}
-              </button>
-
-              <button
-                onClick={() => copyToClipboard(personalInfo.contacts.email, 'email')}
-                title="Click to copy email address"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950/40 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors"
-              >
-                <Mail size={13} />
-                <span>{personalInfo.contacts.email}</span>
-                {copiedField === 'email' ? <Check size={12} className="text-emerald-500" /> : <Copy size={12} className="opacity-60" />}
-              </button>
-
-              <a
-                href={personalInfo.contacts.github}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors"
-                aria-label="GitHub Profile"
-              >
-                <GithubIcon size={16} />
-              </a>
-
-              <a
-                href={personalInfo.contacts.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 transition-colors"
-                aria-label="LinkedIn Profile"
-              >
-                <LinkedinIcon size={16} />
-              </a>
-            </div>
-
           </div>
 
           {/* Right Column: 3D Cutout Portrait without Rounded Circle */}
@@ -176,7 +129,7 @@ export const Hero: React.FC = () => {
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="relative w-full max-w-[420px] aspect-[4/5] flex items-center justify-center photo-3d-container cursor-pointer select-none"
+              className="relative w-full max-w-[380px] sm:max-w-[420px] flex items-center justify-center photo-3d-container cursor-pointer select-none"
             >
               {/* Diffuse radial backdrop aura */}
               <div 
@@ -186,7 +139,7 @@ export const Hero: React.FC = () => {
 
               {/* 3D Perspective Card Container */}
               <div
-                className="relative w-full h-full flex flex-col items-center justify-end photo-3d-card pb-2"
+                className="relative w-full flex flex-col items-center justify-center photo-3d-card"
                 style={{
                   transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) ${
                     isHovered ? 'scale3d(1.03, 1.03, 1.03)' : 'scale3d(1, 1, 1)'
@@ -195,22 +148,22 @@ export const Hero: React.FC = () => {
               >
                 {/* Authentic 3D Cutout Image (WebP only, no circle mask, no borders) */}
                 <img
-                  src="./assets/om-portrait.webp"
+                  src="./om-portrait.webp"
                   alt="Om Rajendra Bharambe portrait"
-                  className="relative z-10 w-full max-h-[460px] object-contain photo-cutout-img drop-shadow-2xl"
+                  className="relative z-10 w-full max-h-[440px] object-contain photo-cutout-img drop-shadow-2xl"
                   loading="eager"
                   decoding="async"
                 />
 
                 {/* Grounding Contact Shadow underneath the silhouette */}
                 <div 
-                  className="w-3/4 h-5 -mt-3 bg-slate-900/25 dark:bg-black/60 rounded-full blur-md pointer-events-none"
+                  className="w-3/4 h-4 -mt-2 bg-slate-900/25 dark:bg-black/60 rounded-full blur-md pointer-events-none"
                   aria-hidden="true"
                 />
 
                 {/* Floating 3D Badge 1: Alphabyte 3.0 Winner */}
                 <div 
-                  className="absolute top-2 -left-2 sm:-left-6 z-20 animate-float-1 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
+                  className="absolute top-1 -left-2 sm:-left-6 z-20 animate-float-1 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
                   style={{ transform: 'translateZ(65px)' }}
                 >
                   <div className="flex items-center gap-2.5">
@@ -230,7 +183,7 @@ export const Hero: React.FC = () => {
 
                 {/* Floating 3D Badge 2: IEEE R10 Finalist */}
                 <div 
-                  className="absolute top-28 -right-2 sm:-right-6 z-20 animate-float-2 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
+                  className="absolute top-20 sm:top-24 -right-2 sm:-right-6 z-20 animate-float-2 px-3.5 py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl"
                   style={{ transform: 'translateZ(70px)' }}
                 >
                   <div className="flex items-center gap-2.5">

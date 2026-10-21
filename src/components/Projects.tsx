@@ -31,11 +31,11 @@ export const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="py-16 scroll-mt-20 border-t border-slate-200/80 dark:border-slate-800/80">
+    <section id="projects" className="py-8 sm:py-10 lg:py-10 scroll-mt-16 border-t border-slate-200/80 dark:border-slate-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
               Engineering Work
@@ -50,7 +50,7 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 mb-8">
+        <div className="flex flex-wrap items-center gap-2 mb-6">
           {categories.map((cat) => (
             <button
               key={cat.value}

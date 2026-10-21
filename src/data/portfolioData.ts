@@ -1,8 +1,14 @@
-import { Project, Milestone, Certification, SkillGroup } from '../types';
+import { Project, Milestone, Certification, SkillGroup, EducationItem } from '../types';
 
 export const personalInfo = {
   name: 'Om Rajendra Bharambe',
   headline: 'Full-Stack Developer, AI & IoT Engineer',
+  roles: [
+    'Full-Stack Developer',
+    'AI & IoT Engineer',
+    'Backend Systems Builder',
+    'Edge Vision & Embedded Hardware'
+  ],
   tagline: 'B.Tech IT Student @ PCCOE Pune | Building practical, high-impact systems from web backends to edge hardware',
   about: [
     'Curious about what can be built, improved, or engineered differently. I am an Information Technology student at Pimpri Chinchwad College of Engineering (PCCOE) focused on turning concepts into reliable, production-ready solutions.',
@@ -19,7 +25,7 @@ export const personalInfo = {
     details: 'Focusing on distributed systems, data structures, cloud infrastructure, and embedded hardware development.'
   },
   contacts: {
-    phone: '+91 8421936775',
+    phone: '+918421936775',
     phoneRaw: '8421936775',
     email: 'ombharambe901@gmail.com',
     linkedin: 'https://www.linkedin.com/in/om29dev',
@@ -368,4 +374,63 @@ export const certifications: Certification[] = [
     category: 'workshops'
   }
 ];
+
+export const educationList: EducationItem[] = [
+  {
+    id: 'pccoe-btech',
+    institution: 'Pimpri Chinchwad College of Engineering (PCCOE)',
+    degree: 'Bachelor of Technology (B.Tech)',
+    field: 'Information Technology',
+    period: '2024 - 2028',
+    location: 'Pune, Maharashtra, India',
+    badge: 'Undergraduate Program',
+    logoUrl: './education/pccoe-pune-logo.webp',
+    details: 'Pursuing undergraduate engineering with core emphasis on distributed systems, data structures, cloud computing, and embedded IoT architectures.',
+    subjects: ['Data Structures & Algorithms', 'Operating Systems', 'Database Management', 'Object-Oriented Programming', 'IoT & Embedded Hardware']
+  },
+  {
+    id: 'matoshri-hsc',
+    institution: 'Matoshri Junior College',
+    degree: 'Higher Secondary Certificate (HSC - 12th)',
+    field: 'Science Stream',
+    period: '2022 - 2024',
+    location: 'Eklahare, Nashik, Maharashtra',
+    score: '86.83%',
+    scoreLabel: 'Score: 521 / 600 Marks',
+    badge: 'HSC Science',
+    details: 'Completed Higher Secondary Certificate in Science under Maharashtra State Board (Nashik Divisional Board) with First Class Distinction.',
+    previewUrl: './education/om-bharambe-hsc-12th-marksheet.webp',
+    subjects: [
+      'Information Technology (91/100)',
+      'Mathematics & Statistics (91/100)',
+      'Geography (89/100)',
+      'Physics (87/100)',
+      'Chemistry (84/100)',
+      'English (79/100)'
+    ]
+  },
+  {
+    id: 'st-lawrence-ssc',
+    institution: 'St. Lawrence High School and Junior College',
+    degree: 'Secondary School Certificate (SSC - 10th)',
+    field: 'General & Foundation Studies',
+    period: 'Passed March 2022',
+    location: 'Nashik, Maharashtra, India',
+    score: '90.80%',
+    scoreLabel: 'Score: 454 / 500 Marks',
+    badge: 'SSC Board Exam',
+    logoUrl: './education/st-lawrence-school-nashik.webp',
+    details: 'Completed Secondary School Certificate under Maharashtra State Board (Nashik Divisional Board) with First Class Distinction.',
+    previewUrl: './education/om-bharambe-ssc-10th-marksheet.webp',
+    subjects: [
+      'Social Sciences (95/100)',
+      'English (92/100)',
+      'Mathematics (91/100)',
+      'Hindi (87/100)',
+      'Science & Technology (86/100)',
+      'Marathi (76/100)'
+    ]
+  }
+];
+
 

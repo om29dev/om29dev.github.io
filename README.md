@@ -54,9 +54,9 @@ om29dev.github.io/
 
 - **3D Perspective Portrait**: Full-body transparent WebP cutout with mouse-tracking 3D tilt, realistic drop shadows, and floating achievement badges without rounded circular cropping.
 - **Progressive Disclosure**: Built-in "View More" and "Show Fewer" expansion buttons keep the site concise and scannable without overwhelming the visitor.
-- **Light Theme by Default**: Clean, high-contrast light theme with an optional dark mode toggle that respects user preference.
+- **Dark Theme by Default**: Clean, high-contrast dark theme with an optional light mode toggle that respects user preference.
 - **Interactive Filtering**: Filter projects smoothly across Full-Stack, AI / Vision, and IoT / Edge categories.
-- **Direct Contact Integrations**: One-click copy for mobile (+91 8421936775) and email (ombharambe901@gmail.com) with toast confirmations.
+- **Direct Contact Integrations**: One-click copy for mobile (+918421936775) and email (ombharambe901@gmail.com) with toast confirmations.
 - **Strict Code Standards**: Zero emojis, zero en/em dashes, and standard ASCII typography.
 
 ## Local Development
