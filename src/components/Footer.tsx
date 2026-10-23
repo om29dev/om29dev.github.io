@@ -21,17 +21,6 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={scrollToTop}
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-700"
-              aria-label="Back to top"
-              title="Back to top"
-            >
-              <ArrowUp size={16} />
-            </button>
-          </div>
-
         </div>
       </div>
     </footer>
