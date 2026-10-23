@@ -27,7 +27,7 @@ export const Skills: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
               Capabilities
@@ -36,20 +36,20 @@ export const Skills: React.FC = () => {
               Technical Stack & Skills
             </h2>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md">
             Technologies and toolsets applied across daily engineering workflows and competitive hackathons.
           </p>
         </div>
 
-        {/* Skills Grid */}
+        {/* Skills Grid: 1 col on mobile, 2 col on tablet, 3 col on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group) => (
             <div
               key={group.category}
-              className="rounded-2xl p-6 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between"
+              className="rounded-2xl p-5 sm:p-6 bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between"
             >
               <div className="flex items-center gap-2.5 mb-4">
-                <div className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800">
+                <div className="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 shrink-0">
                   {getIcon(group.category)}
                 </div>
                 <h3 className="font-bold text-base text-slate-900 dark:text-white">
@@ -61,7 +61,7 @@ export const Skills: React.FC = () => {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200/60 dark:border-slate-700/60 transition-colors"
+                    className="px-2.5 sm:px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200/60 dark:border-slate-700/60 transition-colors"
                   >
                     {skill}
                   </span>
@@ -75,4 +75,3 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
-

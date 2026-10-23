@@ -1,5 +1,22 @@
 export type ProjectCategory = 'all' | 'fullstack' | 'ai' | 'iot';
 
+export interface ProjectCaseStudy {
+  problem: {
+    summary: string;
+    points: string[];
+  };
+  solution: {
+    summary: string;
+    points: string[];
+    architecture?: string[];
+  };
+  impact: {
+    summary: string;
+    points: string[];
+    metrics?: string[];
+  };
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -11,6 +28,7 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   metrics?: string;
+  caseStudy?: ProjectCaseStudy;
 }
 
 export interface Milestone {

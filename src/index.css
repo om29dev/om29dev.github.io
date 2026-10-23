@@ -130,4 +130,13 @@
   animation: cursorBlink 0.9s infinite;
 }
 
+/* Hide scrollbar for horizontally scrollable filter rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}

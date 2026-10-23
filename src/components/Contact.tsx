@@ -17,7 +17,7 @@ export const Contact: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-3 sm:gap-4">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
               Get In Touch
@@ -26,12 +26,12 @@ export const Contact: React.FC = () => {
               Contact & Collaboration
             </h2>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md">
             Open to internship opportunities, software collaborations, and technical projects.
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
+        {/* Contact Cards Grid: 1 col on mobile, 2 col on tablet, 4 col on desktop */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
           {/* Email Card */}
@@ -44,7 +44,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => copyToClipboard(personalInfo.contacts.email, 'email')}
                   title="Copy email address"
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  className="p-2 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[38px] min-w-[38px] flex items-center justify-center cursor-pointer"
                 >
                   {copiedField === 'email' ? (
                     <Check size={16} className="text-emerald-500" />
@@ -65,7 +65,7 @@ export const Contact: React.FC = () => {
 
             <a
               href={`mailto:${personalInfo.contacts.email}`}
-              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline min-h-[36px]"
             >
               <span>Compose Email</span>
               <ArrowUpRight size={14} />
@@ -82,7 +82,7 @@ export const Contact: React.FC = () => {
                 <button
                   onClick={() => copyToClipboard(personalInfo.contacts.phone, 'phone')}
                   title="Copy phone number"
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  className="p-2 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors min-h-[38px] min-w-[38px] flex items-center justify-center cursor-pointer"
                 >
                   {copiedField === 'phone' ? (
                     <Check size={16} className="text-emerald-500" />
@@ -100,7 +100,7 @@ export const Contact: React.FC = () => {
               </a>
             </div>
 
-            <div className="mt-4 flex items-center gap-3">
+            <div className="mt-4 flex items-center gap-3 min-h-[36px]">
               <a
                 href={`tel:${personalInfo.contacts.phoneRaw}`}
                 className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
@@ -145,7 +145,7 @@ export const Contact: React.FC = () => {
               href={personalInfo.contacts.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline min-h-[36px]"
             >
               <span>Connect on LinkedIn</span>
               <ArrowUpRight size={14} />
@@ -176,7 +176,7 @@ export const Contact: React.FC = () => {
               href={personalInfo.contacts.github}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:underline"
+              className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:hover:text-blue-400 group-hover:underline min-h-[36px]"
             >
               <span>Explore Repositories</span>
               <ArrowUpRight size={14} />
@@ -188,15 +188,15 @@ export const Contact: React.FC = () => {
         {/* Location & Status Banner */}
         <div className="mt-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-slate-600 dark:text-slate-300">
           <div className="flex items-center gap-2.5">
-            <MapPin size={16} className="text-rose-500 flex-shrink-0" />
+            <MapPin size={16} className="text-rose-500 shrink-0" />
             <span>Based in Pune / Pimpri-Chinchwad, Maharashtra, India (IST / UTC+5:30)</span>
           </div>
           <div className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium">
-            <span className="relative flex h-2 w-2">
+            <span className="relative flex h-2 w-2 shrink-0">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            Available for remote and on-site opportunities
+            <span>Available for remote and on-site opportunities</span>
           </div>
         </div>
 

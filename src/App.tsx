@@ -32,7 +32,7 @@ export const App: React.FC = () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 bg-grid-pattern selection:bg-blue-600 selection:text-white transition-colors duration-200">
+    <div className="min-h-screen w-full overflow-x-hidden bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 bg-grid-pattern selection:bg-blue-600 selection:text-white transition-colors duration-200 relative">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       
       <main>

@@ -32,7 +32,7 @@ export const Education: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3 sm:gap-4">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
               Academic Background
@@ -41,12 +41,12 @@ export const Education: React.FC = () => {
               Education
             </h2>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md">
             Formal undergraduate engineering studies, secondary milestones, and verified board credentials.
           </p>
         </div>
 
-        {/* Education Grid */}
+        {/* Education Grid: 1 col on mobile, 2 col on tablet, 3 col on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {educationList.map((item) => (
             <div
@@ -121,13 +121,13 @@ export const Education: React.FC = () => {
               </div>
 
               {/* Action Buttons: Download PDF */}
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2 flex-wrap">
                 {item.previewUrl ? (
                   <button
                     type="button"
                     onClick={() => handleDownload(item)}
                     disabled={downloadingId === item.id}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors disabled:opacity-60 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors disabled:opacity-60 cursor-pointer min-h-[36px]"
                     title="Download marksheet PDF"
                   >
                     {downloadingId === item.id ? (

@@ -89,7 +89,7 @@ export const Certifications: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3 sm:gap-4">
           <div>
             <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 font-mono">
               Verified Credentials
@@ -98,29 +98,36 @@ export const Certifications: React.FC = () => {
               Certifications & Awards
             </h2>
           </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 max-w-md">
+          <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md">
             Directly attached proof documents for hackathons, engineering internships, and specialized course completions.
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-2 mb-6">
+        {/* Horizontally scrollable pill rail on handheld viewports */}
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 mb-6 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap">
           {categories.map((cat) => (
             <button
               key={cat.value}
               onClick={() => handleCategoryChange(cat.value)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+              className={`shrink-0 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all min-h-[40px] flex items-center gap-1.5 ${
                 selectedCategory === cat.value
-                  ? 'bg-blue-600 text-white shadow-sm'
+                  ? 'bg-blue-600 text-white shadow-sm ring-2 ring-blue-600/30'
                   : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700'
               }`}
             >
-              {cat.label} ({cat.count})
+              <span>{cat.label}</span>
+              <span className={`text-[11px] px-1.5 py-0.2 rounded-md ${
+                selectedCategory === cat.value
+                  ? 'bg-blue-700 text-blue-100'
+                  : 'bg-slate-100 dark:bg-slate-700 text-slate-500 dark:text-slate-400'
+              }`}>
+                {cat.count}
+              </span>
             </button>
           ))}
         </div>
 
-        {/* Certifications Grid */}
+        {/* Certifications Grid: 1 col on mobile, 2 col on tablet, 3 col on desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleCertifications.map((cert) => (
             <div
@@ -175,12 +182,12 @@ export const Certifications: React.FC = () => {
               </div>
 
               {/* Action Buttons: Download PDF & Verify */}
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2">
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between gap-2 flex-wrap">
                 <button
                   type="button"
                   onClick={() => handleDownload(cert)}
                   disabled={downloadingId === cert.id}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors disabled:opacity-60 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-blue-50 dark:hover:bg-blue-950/40 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-200 dark:border-slate-700 transition-colors disabled:opacity-60 cursor-pointer min-h-[36px]"
                   title="Download certificate PDF"
                 >
                   {downloadingId === cert.id ? (
@@ -196,7 +203,7 @@ export const Certifications: React.FC = () => {
                     href={cert.verificationUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors min-h-[36px]"
                     title="Verify credential on provider site"
                   >
                     <span>Verify</span>
@@ -213,7 +220,7 @@ export const Certifications: React.FC = () => {
           <div className="mt-8 flex justify-center">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700 shadow-sm transition-all min-h-[44px]"
             >
               <span>
                 {expanded
@@ -231,22 +238,24 @@ export const Certifications: React.FC = () => {
       {/* Lightbox Modal */}
       {activeModalCert && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-sm animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/75 backdrop-blur-sm animate-fadeIn"
           onClick={() => setActiveModalCert(null)}
+          role="dialog"
+          aria-modal="true"
         >
           <div 
-            className="relative max-w-3xl w-full bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[90vh]"
+            className="relative max-w-3xl w-full bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[92vh]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
             <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 min-w-0 pr-2">
                 <CheckCircle2 size={18} className="text-blue-600 dark:text-blue-400 shrink-0" />
-                <div>
-                  <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                <div className="min-w-0">
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug truncate">
                     {activeModalCert.title}
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
                     {activeModalCert.issuer} ({activeModalCert.date})
                   </p>
                 </div>
@@ -254,7 +263,7 @@ export const Certifications: React.FC = () => {
 
               <button
                 onClick={() => setActiveModalCert(null)}
-                className="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                className="p-2 rounded-xl text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors shrink-0 min-h-[40px] min-w-[40px] flex items-center justify-center"
                 aria-label="Close modal"
               >
                 <X size={18} />
@@ -262,27 +271,27 @@ export const Certifications: React.FC = () => {
             </div>
 
             {/* Modal Image Body */}
-            <div className="p-4 sm:p-6 overflow-auto bg-slate-50 dark:bg-slate-950/60 flex items-center justify-center">
+            <div className="p-3 sm:p-6 overflow-auto bg-slate-50 dark:bg-slate-950/60 flex items-center justify-center">
               <img
                 src={activeModalCert.previewUrl}
                 alt={activeModalCert.title}
-                className="max-h-[60vh] w-auto max-w-full rounded-lg shadow-md border border-slate-200 dark:border-slate-800 object-contain"
+                className="max-h-[55vh] sm:max-h-[60vh] w-auto max-w-full rounded-lg shadow-md border border-slate-200 dark:border-slate-800 object-contain"
               />
             </div>
 
             {/* Modal Footer */}
-            <div className="flex flex-wrap items-center justify-between p-4 sm:p-5 border-t border-slate-100 dark:border-slate-800 gap-3">
+            <div className="flex flex-wrap items-center justify-between p-3.5 sm:p-5 border-t border-slate-100 dark:border-slate-800 gap-3">
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Type: <span className="font-semibold text-slate-700 dark:text-slate-300">{activeModalCert.type}</span>
               </p>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 {activeModalCert.verificationUrl && (
                   <a
                     href={activeModalCert.verificationUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors min-h-[36px]"
                   >
                     <span>Verify Online</span>
                     <ExternalLink size={13} />
@@ -292,7 +301,7 @@ export const Certifications: React.FC = () => {
                   type="button"
                   onClick={() => handleDownload(activeModalCert)}
                   disabled={downloadingId === activeModalCert.id}
-                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-colors disabled:opacity-60 cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-colors disabled:opacity-60 cursor-pointer min-h-[36px]"
                   title="Download certificate PDF"
                 >
                   {downloadingId === activeModalCert.id ? (
@@ -312,4 +321,3 @@ export const Certifications: React.FC = () => {
     </section>
   );
 };
-
