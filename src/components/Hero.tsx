@@ -169,7 +169,7 @@ export const Hero: React.FC = () => {
 
                 {/* Clamped Floating Badge 1: Alphabyte 3.0 Winner */}
                 <div 
-                  className="absolute top-2 left-0 sm:-left-3 lg:-left-6 z-20 animate-float-1 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl max-w-[210px] sm:max-w-none"
+                  className="absolute top-[48%] sm:top-[44%] lg:top-[38%] left-1 sm:-left-3 lg:-left-6 z-20 animate-float-1 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl max-w-[200px] sm:max-w-none"
                   style={{ transform: 'translateZ(65px)' }}
                 >
                   <div className="flex items-center gap-2 sm:gap-2.5">
@@ -189,7 +189,7 @@ export const Hero: React.FC = () => {
 
                 {/* Clamped Floating Badge 2: IEEE R10 Finalist */}
                 <div 
-                  className="absolute top-20 sm:top-24 right-0 sm:-right-3 lg:-right-6 z-20 animate-float-2 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl max-w-[210px] sm:max-w-none"
+                  className="absolute top-[66%] sm:top-[62%] lg:top-[56%] right-1 sm:-right-3 lg:-right-6 z-20 animate-float-2 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-xl max-w-[200px] sm:max-w-none"
                   style={{ transform: 'translateZ(70px)' }}
                 >
                   <div className="flex items-center gap-2 sm:gap-2.5">
@@ -209,7 +209,7 @@ export const Hero: React.FC = () => {
 
                 {/* Clamped Floating Badge 3: La Trobe AUD 750 Grant */}
                 <div 
-                  className="absolute bottom-2 left-1 sm:left-0 z-20 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-emerald-500/40 text-emerald-700 dark:text-emerald-300 shadow-xl text-[11px] sm:text-xs font-semibold flex items-center gap-1.5 sm:gap-2 max-w-[230px] sm:max-w-none"
+                  className="absolute bottom-2 left-1 sm:left-0 lg:-left-4 z-20 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-emerald-500/40 text-emerald-700 dark:text-emerald-300 shadow-xl text-[11px] sm:text-xs font-semibold flex items-center gap-1.5 sm:gap-2 max-w-[230px] sm:max-w-none"
                   style={{ transform: 'translateZ(60px)' }}
                 >
                   <Sparkles size={13} className="text-emerald-500 shrink-0" />
