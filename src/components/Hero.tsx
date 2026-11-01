@@ -91,6 +91,10 @@ export const Hero: React.FC = () => {
                 <span>PCCOE Pune (B.Tech IT 2024 - 2028)</span>
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <Award size={14} className="text-amber-500 shrink-0" />
+                <span>8.5 CGPA</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                 <MapPin size={14} className="text-rose-500 shrink-0" />
                 <span>Pune, Maharashtra, India</span>
               </span>

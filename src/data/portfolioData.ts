@@ -361,10 +361,22 @@ export const educationList: EducationItem[] = [
     field: 'Information Technology',
     period: '2024 - 2028',
     location: 'Pune, Maharashtra, India',
+    score: '8.5 CGPA',
+    scoreLabel: 'Cumulative: 8.5 CGPA (Sem III: 8.6 | Sem IV: 8.1)',
     badge: 'Undergraduate Program',
     logoUrl: './education/pccoe-pune-logo.webp',
-    details: 'Pursuing undergraduate engineering with core emphasis on distributed systems, data structures, cloud computing, and embedded IoT architectures.',
-    subjects: ['Data Structures & Algorithms', 'Operating Systems', 'Database Management', 'Object-Oriented Programming', 'IoT & Embedded Hardware']
+    details: 'Completed Second Year B.Tech in Information Technology with a cumulative 8.5 CGPA across 80 earned credits (Semester III: 8.6 SGPA, Semester IV: 8.1 SGPA). Core coursework across Data Structures, Database Systems, Computer Networks, Object-Oriented Programming, and IoT.',
+    previewUrl: './education/om-bharambe-pccoe-btech-grade-report.webp',
+    subjects: [
+      'Object-Oriented Programming (Grade O)',
+      'Data Science Laboratory (Grade O)',
+      'Computer Networks & Lab (Grades B, O)',
+      'Database Management Systems & Lab (Grades A, A+)',
+      'Computer Organization & Architecture (Grade A+)',
+      'AI for Financial Modelling (Grade A+)',
+      'Technologies Enabling IoT (Grade A)',
+      'Data Structures & Lab (Grades B+, A+)'
+    ]
   },
   {
     id: 'matoshri-hsc',
