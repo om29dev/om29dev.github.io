@@ -137,25 +137,6 @@ export const Education: React.FC = () => {
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
                   {item.details}
                 </p>
-
-                {/* Key Coursework & Performance Badges */}
-                {item.subjects && item.subjects.length > 0 && (
-                  <div className="mb-4">
-                    <p className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-1.5 font-mono">
-                      Key Coursework & Performance
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {item.subjects.map((subj) => (
-                        <span
-                          key={subj}
-                          className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/60"
-                        >
-                          {subj}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Action Buttons: View & Download PDF */}

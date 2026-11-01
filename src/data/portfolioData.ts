@@ -365,7 +365,7 @@ export const educationList: EducationItem[] = [
     scoreLabel: 'Cumulative: 8.5 CGPA (Sem III: 8.6 | Sem IV: 8.1)',
     badge: 'Undergraduate Program',
     logoUrl: './education/pccoe-pune-logo.webp',
-    details: 'Completed Second Year B.Tech in Information Technology with a cumulative 8.5 CGPA across 80 earned credits (Semester III: 8.6 SGPA, Semester IV: 8.1 SGPA). Core coursework across Data Structures, Database Systems, Computer Networks, Object-Oriented Programming, and IoT.',
+    details: 'Pursuing undergraduate engineering with core emphasis on distributed systems, data structures, cloud computing, and embedded IoT architectures.',
     previewUrl: './education/om-bharambe-pccoe-btech-grade-report.webp',
     subjects: [
       'Object-Oriented Programming (Grade O)',
